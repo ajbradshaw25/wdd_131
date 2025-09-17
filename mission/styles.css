@@ -5,3 +5,9 @@ h2 {
 h1 {
     align-content: center;
 }
+header {
+    align-items: center;
+}
+.img {
+    size:150px;
+}
