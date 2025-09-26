@@ -43,6 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
         logo.src = blueLogoSrc;        // Change the logo back to the blue version
     }
     });
+     if (selectedTheme === 'dark') {
+    body.classList.add('dark');
+    logo.src = 'byui-logo_white.png'; // swap to white logo
+  } else {
+    body.classList.remove('dark');
+    logo.src = 'byui-logo_blue.webp'; // swap back to blue logo
+  }
   }
 
 });
