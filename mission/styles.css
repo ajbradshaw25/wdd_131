@@ -40,3 +40,34 @@ ol li {
 header {
     text-align: center;
 }
+
+
+/* Light Theme (default) */
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Alternatively, using data attributes */
+/* Light Theme (default) */
+html[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #333333;
+}
+
+/* Dark Theme */
+html[data-theme="dark"] {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
