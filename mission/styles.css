@@ -4,6 +4,8 @@ h2 {
 .logo {
     height:150px;
     align-self: center;
+    display: block;
+    margin: 0 auto
 }
 body {
     font-size: 20px;
@@ -29,4 +31,7 @@ p {
 }
 ol li {
     align-content: center;
+}
+header {
+    text-align: center;
 }
