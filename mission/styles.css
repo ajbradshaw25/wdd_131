@@ -5,6 +5,7 @@ h2 {
     text-underline-offset: 10px;
     text-decoration-thickness: 1px;
     text-decoration-color:gray;
+    word-spacing: .5px;
 }
 .logo {
     height:150px;
