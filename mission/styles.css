@@ -53,6 +53,12 @@ body.dark-theme {
   background-color: #333333;
   color: #ffffff;
 }
+.dark-theme h2 {
+    color:#A0D4ED;
+}
+.dark-theme .logo {
+    
+}
 
 /* Alternatively, using data attributes */
 /* Light Theme (default) */
