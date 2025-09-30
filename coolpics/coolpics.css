@@ -181,22 +181,7 @@ img {
   object-fit: cover; /* crops without distortion */
   border-radius: 6px; /* optional, just to soften edges */
 }
-/* hide nav links on small screens */
-nav ul {
-  display: none;
-}
 
-/* show nav links when open */
-nav ul.open {
-  display: block;
-}
-
-/* show nav links automatically on larger screens */
-@media screen and (min-width: 500px) {
-  nav ul {
-    display: block;
-  }
-}
 
 @media screen and (min-width: 700px) {
   .gallery {
