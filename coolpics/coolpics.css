@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 :root {
  --primary-color: #292797;
- --secondary-color: #59c3c3;
+ --secondary-color: #c4c4c4;
  --accent-color: #f45b69;
  --text-dark: #000000;
  --text-light: #ebebeb;
@@ -26,7 +26,15 @@ h1, h2, h3, h4, h5, h6 {
 .hide {
   display: none;
 }
-/* === 2. RESPONSIVE IMAGE RULE === */
+.gallery img {
+  width: 250px; /* Set fixed width for square look */
+  height: 250px; /* Set fixed height for square look */
+  object-fit: cover; /* Crop to fit the square dimensions */
+  border: 5px solid var(--secondary-color);
+  cursor: pointer; /* Indicate clickable image */
+}
+
+  /* === 2. RESPONSIVE IMAGE RULE === */
 /* Images never bigger than the space available */
 img {
     max-width: 100%;
@@ -173,4 +181,60 @@ img {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+ 
+  /* Hide the Menu button */
+  .menu-button {
+    display: none;
+  }
+
+  .menu a {
+    border-top: none;
+    margin-left: 1em;
+    padding: 0.25em 0.5em;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+  }
+
+  .menu a:hover {
+    border-bottom: 3px solid var(--accent-color);
+  }
+}
+/* ---------------------------------------------------- */
+/* Image Viewer (Modal) CSS (Part 2, Step 03) */
+/* ---------------------------------------------------- */
+dialog {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    /* Use rgba for a partially transparent black backdrop */
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 10; 
+    /* Use flexbox to position the content */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Start content from the top */
+}
+
+dialog img {
+    width: 90%; 
+    max-width: 900px; /* Max size for the image to prevent it from being too wide */
+    /* Set max-height and use margin: 20vh auto to center vertically and horizontally */
+    max-height: 80vh; 
+    object-fit: contain; 
+    margin: 20vh auto 0 auto;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 18vh; /* Position slightly above the image to avoid conflict */
+    right: 5%;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 11;
 }
