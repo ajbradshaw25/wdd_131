@@ -40,7 +40,9 @@ header, footer {
     background-color: #1f2937; /* Tailwind's gray-800 */
     color: white;
 }
-
+.hide {
+  display: none !important;
+}
 /* === 2. RESPONSIVE IMAGE RULE === */
 /* Images never bigger than the space available */
 img {
