@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 :root {
- --primary-color: #52489c;
+ --primary-color: #292797;
  --secondary-color: #59c3c3;
  --accent-color: #f45b69;
- --text-dark: #333;
+ --text-dark: #000000;
  --text-light: #ebebeb;
  --primary-font: Arial, Helvetica,sans-serif;
  --secondary-font: Mooli, san-serif;
@@ -15,33 +15,16 @@ body {
     /* Base font size increased (1.125rem is equivalent to 18px, assuming 16px base) */
     font-size: 1.125rem;
     line-height: 1.6;
-    color: #333;
+    color: #7c6cd4;
 }
 
 h1, h2, h3, h4, h5, h6 {
     /* Headline font: Mooli */
     font-family: 'Mooli', sans-serif;
-}
-
-/* Link color */
-a {
-    color: #3b82f6; /* Tailwind's blue-500 */
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-a:hover {
-    color: #2563eb; /* Tailwind's blue-600 */
-    text-decoration: underline;
-}
-
-/* Header and Footer colors */
-header, footer {
-    background-color: #1f2937; /* Tailwind's gray-800 */
-    color: white;
+    margin-top: 0;
 }
 .hide {
-  display: none !important;
+  display: none;
 }
 /* === 2. RESPONSIVE IMAGE RULE === */
 /* Images never bigger than the space available */
@@ -75,14 +58,11 @@ header h1 {
 #menu-button:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-
-body {
-  font-family: var(--primary-font);
-  font-size: 1.2em;
-}
-a:link,
-a:visited {
+a:link { 
   color: var(--accent-color);
+}
+a:visited {
+  color: var(--primary-color);
 }
 
 body {
@@ -97,15 +77,11 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: 1fr; /* 1 column by default (mobile) */
-  gap: 1rem; /* space between images */
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Mooli", Arial, Helvetica, sans-serif;
-  margin-top: 0;
+  gap: 20px; /* space between images */
 }
 
 a {
-  color: #0066cc;  /* link color */
+  color: #f3e414;  /* link color */
   text-decoration: none;
 }
 a:hover,
@@ -119,13 +95,14 @@ a:focus {
    ========================== */
 header,
 footer {
-  background-color: #004466;  /* deep bluish background */
-  color: #fff;
+  background-color: #7a7cf3;  /* deep bluish background */
+  color: #ded8fd;
   padding: 1rem;
   text-align: center;
 }
 main, h1 {
     text-align:center;
+    color:#5037df
 }
 /* ==========================
    Navigation
@@ -146,7 +123,7 @@ nav li {
 }
 
 nav a {
-  color: #fff; 
+  color: #484b28; 
   font-weight: bold;
 }
 
@@ -154,8 +131,8 @@ nav a {
 button.menu {
   background: none;
   border: none;
-  color: #fff;
-  font-size: 2rem;
+  color: #ecdf27;
+  font-size: 2.2rem;
   cursor: pointer;
   padding: 0.5rem;
 }
@@ -176,11 +153,6 @@ img {
   object-fit: cover; /* crops without distortion */
   border-radius: 6px; /* optional, just to soften edges */
 }
-/* Optional: Add media queries to *only* hide on small screens
-   and show the button. For this plan, we'll focus on the JavaScript toggle.
-   But typically, you'd hide the links and show the button only below
-   a certain breakpoint.
-*/
 
 /* At 500px and up: 2 columns */
 @media screen and (min-width: 500px) {
@@ -200,14 +172,5 @@ img {
 @media screen and (min-width: 1100px) {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-  nav ul {
-    display: block;
   }
 }
