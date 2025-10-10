@@ -1,5 +1,4 @@
 const menuButton = document.querySelector(".menu-button");
-const menuLinks = document.querySelector('#menuLinks');
 const menu = document.querySelector(".menu");
 const gallery = document.querySelector('.gallery');
 const breakpoint = 1000; // Matches the CSS media query breakpoint
@@ -8,11 +7,6 @@ function toggleMenu() {
     // 1. Toggle the 'hide' class on the menu links list
     const menu = document.querySelector(".menu")
     menu.classList.toggle('hide');
-
-    // 2. (Accessibility improvement) Update the aria-expanded attribute
-    //    The attribute should reflect whether the menu is currently visible (true) or hidden (false)
-    const isExpanded = menuLinks.classList.contains('hide') ? 'false' : 'true';
-    menuButton.setAttribute('aria-expanded', isExpanded);
 }
 
 // 02. Function to manage menu visibility on window resize
