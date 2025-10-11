@@ -1,6 +1,5 @@
 const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu");
-const gallery = document.querySelector('.gallery');
 const breakpoint = 1000; // Matches the CSS media query breakpoint
 
 function toggleMenu() {
@@ -31,6 +30,9 @@ menuButton.addEventListener("click", toggleMenu);
 window.addEventListener("resize", handleResize);
 
 // --- Part 2: 03 & 04: Image Viewer Modal ---
+
+// 1. Target the gallery container
+const gallery = document.querySelector('.gallery');
 
 // Function to handle showing the image viewer when a gallery image is clicked
 function showImageViewer(event) {
