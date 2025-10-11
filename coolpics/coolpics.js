@@ -25,7 +25,7 @@ function handleResize() {
 handleResize(); 
 
 // Event listeners
-menuButton.addEventListener("click", toggleMenu);
+
 window.addEventListener("resize", handleResize);
 
 // --- Part 2: 03 & 04: Image Viewer Modal ---
