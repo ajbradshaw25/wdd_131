@@ -4,7 +4,6 @@ const breakpoint = 1000; // Matches the CSS media query breakpoint
 
 function toggleMenu() {
     // 1. Toggle the 'hide' class on the menu links list
-    const menu = document.querySelector(".menu")
     menu.classList.toggle('hide');
 }
 
