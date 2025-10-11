@@ -2,7 +2,7 @@
 :root {
  --primary-color: #292797;
  --secondary-color: #c4c4c4;
- --accent-color: #f45b69;
+ --accent-color: #f4cb5b;
  --text-dark: #000000;
  --text-light: #ebebeb;
  --primary-font: Arial, Helvetica,sans-serif;
@@ -154,52 +154,6 @@ img {
   object-fit: cover; /* crops without distortion */
   border-radius: 6px; /* optional, just to soften edges */
 }
-
-/* At 500px and up: 2 columns */
-@media screen and (min-width: 500px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* At 800px and up: 3 columns */
-@media screen and (min-width: 800px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  ul {
-    display: none;
-  }
-}
-
-/* At 1100px and up: 4 columns */
-@media screen and (min-width: 1100px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
- 
-  /* Hide the Menu button */
-  .menu-button {
-    display: none;
-  }
-  ul {
-    display: initial;
-  }
-  ul li {
-    display: inline-block;
-  }
-  .menu a {
-    border-top: none;
-    margin-left: 1em;
-    padding: 0.25em 0.5em;
-    background-color: transparent;
-    border-bottom: 3px solid transparent;
-  }
-
-  .menu a:hover {
-    border-bottom: 3px solid var(--accent-color);
-  }
-}
 /* ---------------------------------------------------- */
 /* Image Viewer (Modal) CSS (Part 2, Step 03) */
 /* ---------------------------------------------------- */
@@ -238,4 +192,63 @@ dialog img {
     font-size: 1.2em;
     cursor: pointer;
     z-index: 11;
+    border-radius: 4px;
+}
+
+/* At 500px and up: 2 columns */
+@media screen and (min-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* At 800px and up: 3 columns */
+@media screen and (min-width: 800px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  ul {
+    display: none;
+  }
+  /* Media query for larger screens, giving the image more space */
+  dialog img {
+        max-width: 900px; /* Limit the image width on very large screens */
+        max-height: 70vh;
+        margin-top: 15vh;
+    }
+    .close-viewer {
+        top: 13vh;
+        right: 15%; /* Move the button further from the edge on wider screens */
+        padding: 0.7em 1.2em;
+        font-size: 1.5em;
+    }
+}
+
+/* At 1100px and up: 4 columns */
+@media screen and (min-width: 1100px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+ 
+  /* Hide the Menu button */
+  .menu-button {
+    display: none;
+  }
+  ul {
+    display: initial;
+  }
+  ul li {
+    display: inline-block;
+  }
+  .menu a {
+    border-top: none;
+    margin-left: 1em;
+    padding: 0.25em 0.5em;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+  }
+
+  .menu a:hover {
+    border-bottom: 3px solid var(--accent-color);
+  }
 }
