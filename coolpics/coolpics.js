@@ -21,12 +21,13 @@ function handleResize() {
   }
 }
 
+// Event listeners
+menuButton.addEventListener("click", toggleMenu);
+window.addEventListener("resize", handleResize);
+
 // Initial call to set the menu state on page load
 handleResize(); 
 
-// Event listeners
-
-window.addEventListener("resize", handleResize);
 
 // --- Part 2: 03 & 04: Image Viewer Modal ---
 
@@ -85,6 +86,7 @@ function showImageViewer(event) {
     });
   }
 }
+
 
 // Add the event listener to the gallery container for image clicks
 gallery.addEventListener('click', showImageViewer);
