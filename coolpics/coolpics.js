@@ -22,7 +22,7 @@ function handleResize() {
 }
 
 // Event listeners
-menuButton.addEventListener("click", toggleMenu);
+document.querySelector(".menu-button").addEventListener("click", toggleMenu);
 window.addEventListener("resize", handleResize);
 
 // Initial call to set the menu state on page load
