@@ -7,6 +7,7 @@ function toggleMenu() {
     menu.classList.toggle('hide');
 }
 
+menuButton.addEventListener("click", toggleMenu)
 // 02. Function to manage menu visibility on window resize
 function handleResize() {
   // If the screen width is greater than the breakpoint (1000px)
@@ -22,7 +23,6 @@ function handleResize() {
 }
 
 // Event listeners
-document.querySelector(".menu-button").addEventListener("click", toggleMenu);
 window.addEventListener("resize", handleResize);
 
 // Initial call to set the menu state on page load
