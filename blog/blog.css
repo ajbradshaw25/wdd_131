@@ -1,0 +1,213 @@
+/* 03. General Styles, Colors, and Fonts */
+:root {
+    --gold-color: #ffdd6f;
+    --red-color: #eeb03e;
+    --dark-color: #391797;
+}
+
+/* Set up for the skip to content link */
+.skiptocontent a {
+    position: absolute; /* Hide off-screen */
+    left: 0;
+    top: -40px; /* Moves it off the screen */
+    z-index: 100;
+    padding: 8px;
+    background-color: var(--gold-color);
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: top 0.3s;
+}
+
+.skiptocontent a:focus {
+    top: 0; /* Brings it into view on focus/tab */
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif; /* Body font */
+    color: var(--dark-color);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+    background-color: #fff; /* White background */
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', Impact, serif; /* Headline font */
+    color: var(--red-color);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--red-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover, a:focus {
+    color: var(--gold-color);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below inline images */
+}
+
+/* Visually highlight the date (accessibility consideration from prompt) */
+.article-date {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--dark-color);
+    display: block; /* Make it take up its own line in the details section */
+    margin-bottom: 5px;
+}
+
+
+/* 05. Finish Styling the Header */
+header {
+    background-color: var(--dark-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff; /* White text for the main title */
+    font-size: 3em;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+nav {
+    border-top: 1px solid var(--gold-color);
+    border-bottom: 1px solid var(--gold-color);
+    padding: 10px 0;
+    max-width: 1200px; /* Limit width of the navigation block */
+    margin: 0 auto; /* Center the navigation block */
+}
+
+.main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* 04. Navigation Grid - Container */
+    display: grid;
+    /* Create 3 columns, wide enough for text, aligned to the right */
+    grid-template-columns: auto auto auto; 
+    justify-content: end; /* Align the grid to the right side of its container (nav) */
+    gap: 20px;
+    padding-right: 20px; /* Spacing from the right edge */
+}
+
+.main-nav li {
+    /* 04. Navigation Grid - Items */
+    /* No styles needed for li other than what's inherited, 
+       as the grid container (.main-nav) handles the layout. */
+    text-align: center; /* Center link text within its grid cell */
+}
+
+.main-nav a {
+    color: var(--gold-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px; /* Increase hit area and height of nav bar */
+    font-size: 1.1em;
+    line-height: 2; /* Increases effective height of the nav bar area */
+}
+
+.main-nav a:hover, .main-nav a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--red-color);
+}
+
+
+/* 04. Main Layout Grid (Articles and Sidebar) */
+.main-grid-container {
+    display: grid;
+    /* Articles on left (wider), Sidebar on right (narrower) */
+    grid-template-columns: 3fr 1fr; 
+    gap: 40px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px; /* Padding for small screens */
+}
+
+/* Sidebar Styling (right box) */
+.filter-sidebar {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sidebar-placeholder {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed var(--gold-color);
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Article Styling */
+.articles-container h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--gold-color);
+    padding-bottom: 10px;
+}
+
+article {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed var(--dark-color);
+}
+
+/* 04. Article Content Grid (Details and Content) */
+.article-grid {
+    display: grid;
+    /* Details on left (narrower), Content on right (wider) */
+    grid-template-columns: 200px 1fr; /* Exact width for details, relative for content */
+    gap: 20px;
+}
+
+.article-details {
+    padding-right: 15px;
+    border-right: 1px solid #eee;
+    font-size: 0.9em;
+}
+
+.article-details p {
+    margin: 5px 0;
+}
+
+.article-content {
+    /* Styles for the title, image, and description */
+}
+
+.article-content h3 {
+    margin-top: 0;
+}
+
+.article-content figure {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-left: 5px solid var(--red-color);
+}
+
+.article-content figcaption {
+    font-style: italic;
+    font-size: 0.85em;
+    color: var(--dark-color);
+    padding-top: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.85em;
+}

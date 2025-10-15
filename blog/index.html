@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="blog.css" />
+    <meta name="description" content="Book Gaze is a simple blog site featuring book reviews and literary discussions.">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <script src="blog.js" defer></script>
 </head>
     <header>
@@ -12,7 +14,7 @@
             <a href="#maincontent">skip to main content</a>
         </div>
         
-        <h1>The Book Nook</h1>
+        <h1>Book Gaze</h1>
         
         <nav>
             <ul class="main-nav">
@@ -39,7 +41,7 @@
                         <div class="article-content">
                             <h3>A Review of Pride and Prejudice</h3>
                             <figure>
-                                <img src="images/pride_and_prejudice.jpg" alt="Book cover of Pride and Prejudice" loading="lazy">
+                                <img src="blog/Pride_and_Prejudice.jpg" alt="Book cover of Pride and Prejudice" loading="lazy">
                                 <figcaption>Pride and Prejudice by Jane Austen</figcaption>
                             </figure>
                             <p>The timeless classic, **Pride and Prejudice**, continues to enchant readers with its witty dialogue and memorable characters. The novel follows the spirited Elizabeth Bennet as she navigates societal expectations and misjudgments in 19th-century England.</p>
@@ -60,7 +62,7 @@
                         <div class="article-content">
                             <h3>Foundation: A Masterpiece of Sci-Fi</h3>
                             <figure>
-                                <img src="images/foundation.jpg" alt="Book cover of Foundation" loading="lazy">
+                                <img src="images/Foundation.jpg" alt="Book cover of Foundation" loading="lazy">
                                 <figcaption>Foundation by Isaac Asimov</figcaption>
                             </figure>
                             <p>**Foundation** is the inaugural novel in Isaac Asimov's seminal series. It introduces the concept of **psychohistory**, a predictive science that foretells the decline of the Galactic Empire. The story follows the efforts to shorten the coming dark age.</p>
@@ -86,7 +88,6 @@
 
     <footer>
         <p>&copy; <span id="currentYear"></span> The Book Nook. All rights reserved.</p>
-        <p>Built for WDD 131.</p>
     </footer>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
