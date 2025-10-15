@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="blog.css" />
+    <script src="blog.js" defer></script>
+</head>
+    <header>
+        <div class="skiptocontent">
+            <a href="#maincontent">skip to main content</a>
+        </div>
+        
+        <h1>The Book Nook</h1>
+        
+        <nav>
+            <ul class="main-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+        </nav>
+</header>
+<body>
+    <main id="maincontent">
+        <div class="main-grid-container">
+            <section class="articles-container">
+                <h2>Recent Reviews</h2>
+                
+                <article>
+                    <div class="article-grid">
+                        <div class="article-details">
+                            <span class="article-date">Published: <time datetime="2025-10-15">October 15, 2025</time></span>
+                            <p>Author: Jane Austen</p>
+                            <p>Category: Classic</p>
+                            <p>Rating: ⭐️⭐️⭐️⭐️ (4/5)</p>
+                        </div>
+                        <div class="article-content">
+                            <h3>A Review of Pride and Prejudice</h3>
+                            <figure>
+                                <img src="images/pride_and_prejudice.jpg" alt="Book cover of Pride and Prejudice" loading="lazy">
+                                <figcaption>Pride and Prejudice by Jane Austen</figcaption>
+                            </figure>
+                            <p>The timeless classic, **Pride and Prejudice**, continues to enchant readers with its witty dialogue and memorable characters. The novel follows the spirited Elizabeth Bennet as she navigates societal expectations and misjudgments in 19th-century England.</p>
+                            <p>Austen's exploration of class, marriage, and personal growth remains relevant. While the pacing can be slow at times, the satisfying resolution and rich character development make it a must-read.</p>
+                            <a href="#">Read More...</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="article-grid">
+                        <div class="article-details">
+                            <span class="article-date">Published: <time datetime="2025-10-08">October 8, 2025</time></span>
+                            <p>Author: Isaac Asimov</p>
+                            <p>Category: Science Fiction</p>
+                            <p>Rating: ⭐️⭐️⭐️⭐️⭐️ (5/5)</p>
+                        </div>
+                        <div class="article-content">
+                            <h3>Foundation: A Masterpiece of Sci-Fi</h3>
+                            <figure>
+                                <img src="images/foundation.jpg" alt="Book cover of Foundation" loading="lazy">
+                                <figcaption>Foundation by Isaac Asimov</figcaption>
+                            </figure>
+                            <p>**Foundation** is the inaugural novel in Isaac Asimov's seminal series. It introduces the concept of **psychohistory**, a predictive science that foretells the decline of the Galactic Empire. The story follows the efforts to shorten the coming dark age.</p>
+                            <p>Asimov's world-building and intellectual scope are breathtaking. This book is a foundational text for the science fiction genre, exploring themes of societal collapse, knowledge, and power.</p>
+                            <a href="#">Read More...</a>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <aside class="filter-sidebar">
+                <h3>Filter Reviews</h3>
+                <p>Filter form will go here</p>
+                
+                <div class="sidebar-placeholder">
+                    <p>Sidebar content 1</p>
+                    <p>Sidebar content 2</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> The Book Nook. All rights reserved.</p>
+        <p>Built for WDD 131.</p>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    
+</body>
+</html>
