@@ -44,14 +44,14 @@ header h1 {
 }
 /* === 4. MENU BUTTON STYLING === */
 /* Make the button look not like a button */
-#menu-button {
+#Menubutton {
     /* Reset button default styles */
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem 1rem;
     /* Styling to match header text */
-    color: white;
+    color: #f4cb5b;
     font-size: 1.125rem;
     font-family: 'Mooli', sans-serif;
     text-transform: uppercase;
@@ -60,11 +60,11 @@ header h1 {
     transition: background-color 0.2s;
     border-radius: 0.375rem;
 }
-.menu-button {
+.Menubutton {
   display: none;
 }
 
-#menu-button:hover {
+#Menubutton:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 a:link { 
@@ -129,7 +129,7 @@ nav a {
 }
 
 /* Style the Menu button (mobile) */
-button.menu {
+button.Menu {
   background: none;
   border: none;
   color: #ecdf27;
@@ -231,7 +231,7 @@ dialog img {
   }
  
   /* Hide the Menu button */
-  .menu-button {
+  .Menubutton {
     display: none;
   }
   ul {
@@ -240,7 +240,7 @@ dialog img {
   ul li {
     display: inline-block;
   }
-  .menu a {
+  .Menu a {
     border-top: none;
     margin-left: 1em;
     padding: 0.25em 0.5em;
@@ -248,7 +248,7 @@ dialog img {
     border-bottom: 3px solid transparent;
   }
 
-  .menu a:hover {
+  .Menu a:hover {
     border-bottom: 3px solid var(--accent-color);
   }
 }

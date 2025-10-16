@@ -1,24 +1,24 @@
-const menuButton = document.querySelector(".menu-button");
-const menu = document.querySelector(".menu");
+const Menubutton = document.querySelector(".Menubutton");
+const Menu = document.querySelector(".Menu");
 const breakpoint = 1000; // Matches the CSS media query breakpoint
 
 function toggleMenu() {
     // 1. Toggle the 'hide' class on the menu links list
-    menu.classList.toggle('hide');
+    Menu.classList.toggle('hide');
 }
 
-menuButton.addEventListener("click", toggleMenu)
+Menubutton.addEventListener("click", toggleMenu)
 // 02. Function to manage menu visibility on window resize
 function handleResize() {
   // If the screen width is greater than the breakpoint (1000px)
   if (window.innerWidth > breakpoint) {
     // Remove the 'hide' class to ensure the horizontal menu is visible
-    menu.classList.remove("hide");
+    Menu.classList.remove("hide");
   } else {
     // If the screen is small, add the 'hide' class (unless the user has toggled it open)
     // NOTE: For better UX, you might check if the menu is already open before adding 'hide', 
     // but the instructions ask to simply add it. The CSS will manage visibility.
-    menu.classList.add("hide");
+    Menu.classList.add("hide");
   }
 }
 
