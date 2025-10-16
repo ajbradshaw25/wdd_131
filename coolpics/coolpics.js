@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 const Menubutton = document.querySelector(".Menubutton");
 const Menu = document.querySelector(".Menu");
 const breakpoint = 1000; // Matches the CSS media query breakpoint
@@ -90,3 +92,5 @@ function showImageViewer(event) {
 
 // Add the event listener to the gallery container for image clicks
 gallery.addEventListener('click', showImageViewer);
+
+});
