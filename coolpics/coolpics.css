@@ -59,6 +59,7 @@ header h1 {
     line-height: 1;
     transition: background-color 0.2s;
     border-radius: 0.375rem;
+    display: none;
 }
 .Menubutton {
   display: none;
@@ -121,6 +122,7 @@ nav {
 }
 nav li {
   margin: 0.5rem 0;
+  text-align: center;
 }
 
 nav a {
@@ -129,7 +131,7 @@ nav a {
 }
 
 /* Style the Menu button (mobile) */
-button.Menu {
+button.menu {
   background: none;
   border: none;
   color: #ecdf27;
