@@ -183,11 +183,11 @@ dialog img {
 
 .close-viewer {
     position: absolute;
-    top: 18vh; /* Position slightly above the image to avoid conflict */
+    top: 20vh; /* Position slightly above the image to avoid conflict */
     right: 5%;
-    background-color: var(--accent-color);
-    color: var(--text-light);
-    border: none;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
     padding: 0.5em 1em;
     font-size: 1.2em;
     cursor: pointer;
