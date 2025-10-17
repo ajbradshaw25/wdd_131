@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-const Menubutton = document.querySelector(".Menubutton");
+const Menubutton = document.getElementById("Menubutton");
 const Menu = document.querySelector(".Menu");
 const breakpoint = 1000; // Matches the CSS media query breakpoint
 
@@ -50,7 +50,7 @@ function showImageViewer(event) {
     const baseName = smallSrc.split('-')[0];
     
     // 2. Construct the full-size image source: 'norris' + '-full.jpeg' -> 'norris-full.jpeg'
-    const fullSrc = baseName + '-full.jpeg';
+    const fullSrc = baseName + '-full.jpg';
 
     // *** Create and populate the dialog element ***
     const dialog = document.createElement('dialog');
