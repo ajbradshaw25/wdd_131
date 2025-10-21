@@ -11,12 +11,24 @@ const stepsHtml = steps.map(listTemplate);
 document.querySelector("#myList").innerHTML = stepsHtml.join();
 
 // example 2
+const grades = ["A", "B", "A"];
+function convertGradeToPoints(grade) {
+  let points = 0;
+  if (grade === "A") {
+    points = 4;
+  } else if (grade === "B") {
+    points = 3;
+  }
+  return points;
+}
+const gpaPoints = grades.map(convertGradeToPoints);
+const pointsTotal = gpaPoints.reduce((total, item) => total + item);
+const gpa = pointsTotal / gpaPoints.length;
+
+const words = ["watermelon", "peach", "apple", "tomato", "grape"];
+const shortWords = words.filter((word) => word.length < 6);
+// example 2
 // is the luckyNumber in the list?
 const myArray = [12, 34, 21, 54];
 const luckyNumber = 21;
-let luckyIndex = -1;
-myArray.forEach(function (item, index) {
-  if (item === luckyNumber) {
-    luckyIndex = index;
-  }
-});
+let luckyIndex = myArray.indexOf(luckyNumber);
