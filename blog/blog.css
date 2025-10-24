@@ -35,6 +35,7 @@ h1, h2, h3 {
     font-family: 'Lora', Impact, serif; /* Headline font */
     color: var(--red-color);
     line-height: 1.2;
+    text-align: center;
 }
 
 a {
@@ -52,6 +53,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block; /* Removes extra space below inline images */
+    align-content: center;
 }
 
 /* Visually highlight the date (accessibility consideration from prompt) */
@@ -210,4 +212,7 @@ footer {
     text-align: center;
     padding: 15px 0;
     font-size: 0.85em;
+}
+h2 {
+    text-align: center;
 }
