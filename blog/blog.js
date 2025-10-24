@@ -15,7 +15,7 @@ const articles = [
         id: 2,
         title: "Foundation: A Masterpiece of Sci-Fi",
         date: "October 8, 2025",
-        description: "Foundation is the inaugural novel in Isaac Asimov's seminal series. It introduces the concept of psychohistory, a predictive science that foretells the decline of the Galactic Empire.",
+        description: "Foundation is the inaugural novel in Isaac Asimov's seminal series. It introduces the concept of psychohistory, a predictive science that foretells the decline of the Galactic Empire.The story follows the efforts to shorten the coming dark age. Asimov's world-building and intellectual scope are breathtaking. This book is a foundational text for the science fiction genre, exploring themes of societal collapse, knowledge, and power.",
         imgSrc: "Foundation.jpg",
         imgAlt: "Book cover of Foundation",
         ages: "16+",
