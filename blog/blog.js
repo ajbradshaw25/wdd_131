@@ -4,6 +4,7 @@ const articles = [
         id: 1,
         title: "Pride and Prejudice",
         date: "October 15, 2025",
+		author: "Jane Austen",
         description: "The timeless classic continues to enchant readers with its witty dialogue and memorable characters. The novel follows the spirited Elizabeth Bennet as she navigates societal expectations and misjudgments in 19th-century England.",
         imgSrc: "Pride_and_Prejudice.jpg",
         imgAlt: "Book cover of Pride and Prejudice",
@@ -14,6 +15,7 @@ const articles = [
     {
         id: 2,
         title: "Foundation: A Masterpiece of Sci-Fi",
+		author: "Isaac Asimov",
         date: "October 8, 2025",
         description: "Foundation is the inaugural novel in Isaac Asimov's seminal series. It introduces the concept of psychohistory, a predictive science that foretells the decline of the Galactic Empire.The story follows the efforts to shorten the coming dark age. Asimov's world-building and intellectual scope are breathtaking. This book is a foundational text for the science fiction genre, exploring themes of societal collapse, knowledge, and power.",
         imgSrc: "Foundation.jpg",
@@ -25,6 +27,7 @@ const articles = [
     {
         id: 3,
         title: "Belgariad Book One: Pawn of Prophecy",
+		author: "David Eddings",
         date: "Feb 12, 2022",
         description: "A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
         imgSrc:"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
