@@ -1,0 +1,287 @@
+/* --- Basic Setup for Visibility --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* --- Main Form Grid (Step 3) --- */
+.card-form {
+    display: grid;
+    /* Define 3 rows: Card Top, Card Overlap (for visual effect), Button */
+    grid-template-rows: auto 200px auto; 
+    grid-template-columns: 350px; /* Fixed width for the form container */
+    
+    /* Set up named grid areas */
+    grid-template-areas:
+        "info"
+        "cards"
+        "button";
+        
+    /* Use a gap to separate the sections */
+    gap: 20px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Card Styling and Overlap --- */
+
+.card-front,
+.card-back {
+    /* Both elements are placed in the same grid area for overlap */
+    grid-area: cards; 
+    
+    /* Basic Card Dimensions and Styling */
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Essential for z-index to work reliably */
+    position: relative; 
+}
+
+/* Specific styling for visual distinction and Z-Index */
+.card-front {
+    background-color: #333; /* Dark background */
+    color: white;
+    /* Place the front card on top */
+    z-index: 2; 
+    /* Offset the front card slightly for the overlap visual effect */
+    transform: translateY(-20px) translateX(20px); 
+}
+
+.card-back {
+    background-color: #888; /* Slightly lighter background */
+    color: white;
+    /* Place the back card underneath */
+    z-index: 1; 
+}
+
+/* --- Button Placement --- */
+.submit-button {
+    grid-area: button;
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #fe8657; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    justify-self: stretch; /* Make button fill the width */
+}
+/* --- Styling for Card Front Grid (Step 4) --- */
+.card-front {
+    /* ... existing styling ... */
+    
+    /* Turn card front into a grid container */
+    display: grid;
+    /* Define 4 columns: small | content | content | small */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Define 5 rows: image | gap | number | name | expiration */
+    grid-template-rows: auto 15px auto auto auto; 
+    
+    /* Add inner space using padding (as noted in the hint) */
+    padding: 30px; 
+    
+    /* Use gap between rows/columns for the "wide darker lines" effect */
+    gap: 10px 5px; 
+}
+
+/* Card Image/Chip Placement */
+.card-image {
+    grid-column: 1 / 2; /* Place in the first column */
+    grid-row: 1 / 2;    /* Place in the first row */
+}
+
+/* Card Number Placement (Across 4 columns) */
+.card-number-group {
+    grid-column: 1 / 5; /* Spans all 4 columns */
+    grid-row: 3 / 4;    /* Third row */
+}
+
+/* Card Holder Placement (Across 4 columns) */
+.card-holder-group {
+    grid-column: 1 / 5; /* Spans all 4 columns */
+    grid-row: 4 / 5;    /* Fourth row */
+}
+
+/* Expiration Placement (Right half of the card) */
+.expiration-group {
+    grid-column: 3 / 5; /* Spans the last two columns (Right side) */
+    grid-row: 5 / 6;    /* Fifth row */
+    
+    /* Ensure the expiration group uses flex or grid to align its inner inputs */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align label/inputs to the right */
+}
+
+/* Ensure the two expiration inputs are side-by-side */
+.date-inputs {
+    display: flex;
+    gap: 5px; 
+}
+
+
+/* --- Basic Input Styling for Card Front --- */
+.card-front label {
+    font-size: 0.7em;
+    opacity: 0.8;
+    margin-bottom: 2px;
+}
+
+.card-front input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Subtle white border */
+    color: white;
+    font-size: 1em;
+    padding: 5px 0;
+    width: 100%; /* Make inputs fill their grid area */
+    box-sizing: border-box; /* Include padding/border in the element's total width/height */
+}
+
+.card-front input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Style for the small expiration inputs */
+.expiration-group input {
+    width: 40px; 
+    text-align: center;
+}
+/* --- Styling for Card Back Grid (Step 5) --- */
+.card-back {
+    /* ... existing styling ... */
+    
+    /* Turn card back into a grid container */
+    display: grid;
+    
+    /* Define 4 rows: top padding | strip | gap | CVV area */
+    grid-template-rows: 20px auto 30px auto; 
+    /* Single column, filling the width */
+    grid-template-columns: 1fr;
+    
+    /* Add inner space using padding for the top/bottom space (as noted in the hint) */
+    padding: 20px; 
+}
+
+/* 1. Magnetic Strip Styling and Placement */
+.magnetic-strip {
+    /* Set color and height (as noted in the hint) */
+    background-color: #000000;
+    height: 40px;
+    
+    /* Place it in the second row */
+    grid-row: 2 / 3; 
+    grid-column: 1 / 2;
+}
+
+/* 2. CVV Group Placement */
+.cvv-group {
+    /* Place it in the fourth row, below the gap */
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    
+    /* Use flexbox to align elements within the group */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align label/input to the right */
+}
+
+/* --- Basic Input Styling for Card Back --- */
+.card-back label {
+    font-size: 0.7em;
+    opacity: 0.8;
+    margin-bottom: 2px;
+    color: white; /* Ensure text is visible */
+}
+
+.card-back input {
+    /* Use a background color to represent the signature panel */
+    background-color: white; 
+    border: 1px solid #ccc;
+    color: #333; /* Dark text color on white background */
+    font-size: 1em;
+    padding: 5px 8px;
+    border-radius: 4px;
+    
+    /* Set a specific width for the CVV input */
+    width: 60px; 
+    text-align: right;
+    box-sizing: border-box; 
+}
+
+.card-back input::placeholder {
+    color: #aaa;
+}
+/* --- Adjusting Main Form and Button --- */
+
+.card-form {
+    /* Existing properties... */
+    
+    /* Center the entire form content horizontally within its container (if needed) */
+    /* justify-items: center; */ 
+    
+    /* Add some visual depth to the cards by adjusting the front card's positioning */
+    transform: perspective(1000px) rotateY(0deg); /* Prepare for potential 3D flip later */
+}
+
+/* Ensure the button is properly spaced from the cards */
+.submit-button {
+    /* Existing properties... */
+    
+    /* Add a small top margin to ensure space if the gap isn't enough */
+    margin-top: 5px; 
+    
+    /* Use justify-self to make the button stretch across the column width */
+    justify-self: stretch; 
+}
+/* --- Card Front Input Group Alignment --- */
+
+/* Align the card number/holder groups to the left */
+.card-number-group,
+.card-holder-group {
+    /* Ensure the group starts at the far left of its grid column */
+    justify-self: start;
+    /* Ensure the text inside the label/input aligns to the start */
+    text-align: left;
+}
+
+/* Vertically center the card chip image */
+.card-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    
+    /* Use align-self to vertically center the chip within its grid row */
+    align-self: center;
+    
+    /* Add some horizontal margin to pull it away from the edge */
+    margin-left: 5px; 
+}
+
+/* Refine general input styling */
+.card-front input {
+    /* Ensure the text is vertically centered nicely */
+    line-height: 1.2; 
+}
+/* --- Card Back Input Group Refinement --- */
+
+.cvv-group {
+    /* Existing properties... */
+    
+    /* Use margin to push the CVV field down slightly from the magnetic strip */
+    margin-top: 10px;
+}
+
+.card-back input {
+    /* Ensure the input is vertically centered in its space */
+    align-self: center;
+    /* Increase height slightly for better usability */
+    height: 30px; 
+}
