@@ -24,6 +24,7 @@ body {
     gap: 20px;
     padding: 30px;
     background-color: white;
+    height: 380px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -74,6 +75,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     justify-self: stretch; /* Make button fill the width */
+    height: 65px;
 }
 /* --- Styling for Card Front Grid (Step 4) --- */
 .card-front {
@@ -250,7 +252,7 @@ body {
     /* Existing properties... */
     
     /* Add a small top margin to ensure space if the gap isn't enough */
-    margin-top: 45px; 
+    margin-top: 50px; 
     
     /* Use justify-self to make the button stretch across the column width */
     justify-self: stretch; 
