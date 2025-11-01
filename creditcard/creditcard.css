@@ -52,7 +52,7 @@ body {
     /* Place the front card on top */
     z-index: 2; 
     /* Offset the front card slightly for the overlap visual effect */
-    transform: translateY(-20px) translateX(20px); 
+    transform: translateY(-50px) translateX(-130px); 
 }
 
 .card-back {
@@ -237,7 +237,7 @@ body {
     /* Existing properties... */
     
     /* Add a small top margin to ensure space if the gap isn't enough */
-    margin-top: 5px; 
+    margin-top: 45px; 
     
     /* Use justify-self to make the button stretch across the column width */
     justify-self: stretch; 
@@ -281,7 +281,7 @@ body {
 
 .card-back input {
     /* Ensure the input is vertically centered in its space */
-    align-self: center;
+    /*align-self: center;*/
     /* Increase height slightly for better usability */
     height: 30px; 
 }
