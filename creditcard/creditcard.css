@@ -40,15 +40,16 @@ body {
     height: 100%;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.15);
     /* Essential for z-index to work reliably */
     position: relative; 
 }
 
 /* Specific styling for visual distinction and Z-Index */
 .card-front {
-    background-color: #333; /* Dark background */
-    color: white;
+    background-color: #489fe6; /* Dark background */
+    background: linear-gradient(#81e2ff, #53599b);
+    color: rgb(255, 255, 255);
     /* Place the front card on top */
     z-index: 2; 
     /* Offset the front card slightly for the overlap visual effect */
@@ -56,8 +57,8 @@ body {
 }
 
 .card-back {
-    background-color: #888; /* Slightly lighter background */
-    color: white;
+    background: linear-gradient(#588fe2, #181c52); /* Slightly lighter background */
+    color: rgb(0, 0, 0);
     /* Place the back card underneath */
     z-index: 1; 
 }
@@ -67,7 +68,7 @@ body {
     grid-area: button;
     padding: 15px;
     font-size: 1.1em;
-    background-color: #fe8657; /* Orange color */
+    background-color: #f58a26; /* Orange color */
     color: white;
     border: none;
     border-radius: 8px;
@@ -96,12 +97,24 @@ body {
 .card-image {
     grid-column: 1 / 2; /* Place in the first column */
     grid-row: 1 / 2;    /* Place in the first row */
+    z-index: 1;
+}
+.color-box {
+    background: linear-gradient(#ff964f, #be3f04);
+    z-index: 2;
+    position: relative;
+    width: 75%;
+    height: 55%;
+    border-radius: 8px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    top: 15px;
 }
 
 /* Card Number Placement (Across 4 columns) */
 .card-number-group {
     grid-column: 1 / 5; /* Spans all 4 columns */
-    grid-row: 3 / 4;    /* Third row */
+    grid-row: 2 / 4;    /* Third row */
 }
 
 /* Card Holder Placement (Across 4 columns) */
@@ -112,8 +125,8 @@ body {
 
 /* Expiration Placement (Right half of the card) */
 .expiration-group {
-    grid-column: 3 / 5; /* Spans the last two columns (Right side) */
-    grid-row: 5 / 6;    /* Fifth row */
+    grid-column: 1 / 5; /* Spans the last two columns (Right side) */
+    grid-row: 4 / 5;    /* Fifth row */
     
     /* Ensure the expiration group uses flex or grid to align its inner inputs */
     display: flex;
