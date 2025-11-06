@@ -154,6 +154,30 @@ button {
 button:hover {
     background: #00b33c;
 }
+/* Example CSS for the participants fieldset and button */
+#participants {
+    display: grid;
+    /* Create a grid with two equally sized columns */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; /* Optional: adds space between items */
+}
+
+/* Target the Add Participant button */
+#add {
+    /* Make the button span both columns to push it to the next row */
+    grid-column: 1 / 3; 
+    /* Or use a shorthand: */
+    /* grid-column: span 2; */
+    /* Ensure it's not stretched if using display: grid on its parent */
+    justify-self: start; 
+}
+
+/* The style to hide an element */
+.hide {
+    display: none;
+}
+
+
 @media (max-width: 568px) {
     .columns div {
         width: 100%;
