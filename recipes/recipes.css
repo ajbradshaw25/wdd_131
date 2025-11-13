@@ -3,14 +3,14 @@
 
 /* Custom Properties */
 :root {
-    --primary-color: #1B98E0; /* A vibrant blue */
-    --secondary-color: #59c3c3; /* A calming teal */
+    --primary-color: #333; /* Darker text for cleaner look */
+    --secondary-color: #f7a072; /* A warm orange for accents */
     --text-dark: #333;
     --text-light: #ebebeb;
     --primary-font: Arial, Helvetica, sans-serif;
-    /* Using 'Handlee' as an accessible replacement for 'Amatic SC' */
     --secondary-font: "Handlee", cursive; 
-    --max-width-desktop: 1200px;
+    --max-width-desktop: 900px; /* Adjusted max width */
+    --border-color: #ccc;
 }
 
 /* Global Styles and Resets */
@@ -24,11 +24,10 @@ body {
     font-family: var(--primary-font);
     color: var(--text-dark);
     line-height: 1.6;
-    background-color: var(--text-light);
+    background-color: white; /* White background as in mockup */
 }
 
 img {
-    /* Responsive image rule */
     max-width: 100%;
     height: auto;
     display: block;
@@ -49,12 +48,12 @@ a {
 /* Header Styling */
 .site-header {
     background-color: white;
-    padding: 1rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 1.5rem; /* Increased gap */
+    /* No shadow in mockup */
 }
 
 .logo-link {
@@ -64,43 +63,49 @@ a {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 0.5rem;
+    width: 60px; /* Larger icon */
+    height: 60px;
+    margin-right: 0.2rem; /* Reduced margin */
 }
 
 .site-title {
-    font-size: 2.2rem;
+    font-size: 3rem; /* Larger title */
     margin: 0;
     color: var(--primary-color);
+    letter-spacing: 2px; /* Slight letter spacing */
 }
 
 /* Search Form Styling */
 .search-form {
     display: flex;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px; /* Wider search bar */
+    border: 1px solid var(--border-color);
+    border-radius: 0; /* No border-radius */
+    overflow: hidden; /* Ensures search button fits cleanly */
 }
 
 #search {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+    padding: 0.8rem 1rem; /* More padding */
+    border: none; /* No individual border */
     flex-grow: 1;
+    font-size: 1rem;
+    outline: none; /* Remove outline on focus */
 }
 
 .search-button {
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: white; /* White background */
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0 4px 4px 0;
+    padding: 0.8rem 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    display: flex; /* To center icon */
+    align-items: center;
+    justify-content: center;
 }
 
-.search-button:hover {
-    background-color: #4aa4a4;
+.search-button img {
+    width: 20px; /* Size for search icon */
+    height: 20px;
 }
 
 /* Main Content and Recipe Grid Styling (Mobile First) */
@@ -110,37 +115,52 @@ a {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    max-width: var(--max-width-desktop); /* Center content */
+    margin: 0 auto;
 }
 
 .recipe-card {
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color); /* Border as in mockup */
+    border-radius: 0; /* No border-radius */
+    box-shadow: none; /* No shadow */
     overflow: hidden;
     width: 100%;
-    max-width: 400px; /* Constrain card width on mobile */
+    max-width: 500px; /* Max width for mobile card */
 }
 
 .recipe-image {
-    height: 200px; /* Fixed height for consistency */
+    height: 250px; /* Slightly taller image */
     object-fit: cover;
+    width: 100%; /* Ensure image fills width */
 }
 
 .recipe-info {
-    padding: 1rem;
+    padding: 1.5rem 1rem; /* More vertical padding */
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
+.recipe-tag {
+    background-color: var(--text-dark); /* Black background for tag */
+    color: white;
+    padding: 0.3em 0.8em;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    align-self: flex-start; /* Align to the left */
+    margin-bottom: 0.5rem;
+}
+
 .recipe-title {
-    font-size: 1.8rem;
+    font-size: 2.5rem; /* Larger title */
     margin: 0;
+    font-family: var(--secondary-font); /* Ensure Handlee for title */
+    color: #4a90e2; /* Blue color for title as in mockup */
 }
 
 .recipe-time {
-    font-size: 0.9em;
-    color: #666;
+    display: none; /* Removed from mockup */
 }
 
 .recipe-rating {
@@ -148,44 +168,34 @@ a {
 }
 
 .rating {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Larger stars */
 }
 
 .icon-star {
-    color: gold; /* Filled star color */
+    color: #f8e71c; /* Yellow color for filled stars */
 }
 
 .icon-star-empty {
-    color: lightgray; /* Empty star color */
+    color: #d8d8d8; /* Lighter grey for empty stars */
 }
 
 .recipe-description {
-    /* Hide on mobile as per instructions */
-    display: none; 
-    font-size: 0.9em;
-    color: #555;
+    /* Always show as per mockup, but styling needs adjustment for responsiveness */
+    display: block; 
+    font-size: 1rem;
+    color: var(--text-dark);
     margin-top: 0.5rem;
 }
 
 .view-recipe-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
-    border-radius: 4px;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
-}
-
-.view-recipe-button:hover {
-    background-color: #1a7ab8;
+    display: none; /* Removed from mockup */
 }
 
 /* Footer Styling */
 .site-footer {
-    background-color: var(--text-dark);
-    color: var(--text-light);
-    padding: 1rem;
+    background-color: white; /* White background */
+    color: var(--text-dark); /* Dark text color */
+    padding: 1.5rem 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -195,76 +205,88 @@ a {
 
 .social {
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem; /* Slightly smaller gap */
+    margin-bottom: 1rem; /* Space between social and attribution */
+}
+
+.social-icon-wrapper {
+    width: 40px; /* Size of the square */
+    height: 40px;
+    border: 1px solid var(--text-dark); /* Dark border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0; /* Square corners */
 }
 
 .social img {
-    width: 30px;
-    height: 30px;
+    width: 24px; /* Icon size inside square */
+    height: 24px;
 }
 
 .attribution {
-    font-size: 0.6em; /* Minimize size as requested */
-    color: #aaa;
+    font-size: 0.7em; /* Slightly larger attribution text */
+    color: var(--text-dark);
 }
 
 .attribution a {
-    color: #aaa;
+    color: var(--text-dark);
     text-decoration: underline;
 }
 
 /* --- Media Queries for Responsiveness --- */
 
-/* Breakpoint 1: Tablet/Small Desktop (approx. 600px) */
-@media (min-width: 600px) {
+/* Breakpoint 1: Tablet/Small Desktop (approx. 600px -> using 768px for a clearer split) */
+@media (min-width: 768px) {
     .site-header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2rem;
+        max-width: var(--max-width-desktop);
+        margin: 0 auto;
+        padding: 3rem 1rem; /* More padding */
     }
 
     .site-title {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
-    
+
     .search-form {
-        max-width: 300px;
+        max-width: 600px;
     }
 
     .recipe-grid {
-        /* Change to a row-based layout for multiple columns */
-        flex-direction: row;
-        flex-wrap: wrap;
+        padding: 2rem 1rem;
         justify-content: center;
     }
 
     .recipe-card {
-        width: calc(50% - 2rem); /* Two cards per row with margin */
-        max-width: 350px;
+        display: flex; /* Flex layout for image and info side-by-side */
+        width: 100%;
+        max-width: var(--max-width-desktop); /* Full width of content area */
+        align-items: stretch; /* Stretch content to fill height */
     }
-    
+
+    .recipe-image {
+        width: 40%; /* Image takes 40% of the card width */
+        height: auto; /* Allow height to adjust */
+        object-fit: cover;
+    }
+
+    .recipe-info {
+        width: 60%; /* Info takes 60% of the card width */
+        padding: 2rem; /* More padding on desktop */
+    }
+
     .recipe-description {
-        /* Show description on wider screens */
-        display: block; 
+        /* Adjust for desktop layout */
+        flex-grow: 1; /* Make description take available space */
     }
 }
 
-/* Breakpoint 2: Large Desktop (approx. 960px) */
-@media (min-width: 960px) {
+/* No explicit 960px breakpoint needed if 768px handles the main layout, 
+   but we can constrain the max width of the elements. */
+@media (min-width: 900px) {
     .site-header, .recipe-grid, .site-footer {
-        /* Constrain content width */
         max-width: var(--max-width-desktop);
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .recipe-grid {
-        justify-content: flex-start;
-        padding: 2rem;
-    }
-
-    .recipe-card {
-        width: calc(33.333% - 2rem); /* Three cards per row */
-        max-width: none; /* Let the 33.333% rule dictate size */
     }
 }
