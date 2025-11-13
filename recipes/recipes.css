@@ -1,0 +1,270 @@
+/* Import accessible header font replacement: Handlee */
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+/* Custom Properties */
+:root {
+    --primary-color: #1B98E0; /* A vibrant blue */
+    --secondary-color: #59c3c3; /* A calming teal */
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    /* Using 'Handlee' as an accessible replacement for 'Amatic SC' */
+    --secondary-font: "Handlee", cursive; 
+    --max-width-desktop: 1200px;
+}
+
+/* Global Styles and Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--text-light);
+}
+
+img {
+    /* Responsive image rule */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Header Styling */
+.site-header {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+}
+
+.site-title {
+    font-size: 2.2rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+}
+
+#search {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    flex-grow: 1;
+}
+
+.search-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #4aa4a4;
+}
+
+/* Main Content and Recipe Grid Styling (Mobile First) */
+.recipe-grid {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.recipe-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px; /* Constrain card width on mobile */
+}
+
+.recipe-image {
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.recipe-title {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.recipe-time {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.recipe-rating {
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    font-size: 1.5rem;
+}
+
+.icon-star {
+    color: gold; /* Filled star color */
+}
+
+.icon-star-empty {
+    color: lightgray; /* Empty star color */
+}
+
+.recipe-description {
+    /* Hide on mobile as per instructions */
+    display: none; 
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.view-recipe-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.view-recipe-button:hover {
+    background-color: #1a7ab8;
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+}
+
+.attribution {
+    font-size: 0.6em; /* Minimize size as requested */
+    color: #aaa;
+}
+
+.attribution a {
+    color: #aaa;
+    text-decoration: underline;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Breakpoint 1: Tablet/Small Desktop (approx. 600px) */
+@media (min-width: 600px) {
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .site-title {
+        font-size: 2.5rem;
+    }
+    
+    .search-form {
+        max-width: 300px;
+    }
+
+    .recipe-grid {
+        /* Change to a row-based layout for multiple columns */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .recipe-card {
+        width: calc(50% - 2rem); /* Two cards per row with margin */
+        max-width: 350px;
+    }
+    
+    .recipe-description {
+        /* Show description on wider screens */
+        display: block; 
+    }
+}
+
+/* Breakpoint 2: Large Desktop (approx. 960px) */
+@media (min-width: 960px) {
+    .site-header, .recipe-grid, .site-footer {
+        /* Constrain content width */
+        max-width: var(--max-width-desktop);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .recipe-grid {
+        justify-content: flex-start;
+        padding: 2rem;
+    }
+
+    .recipe-card {
+        width: calc(33.333% - 2rem); /* Three cards per row */
+        max-width: none; /* Let the 33.333% rule dictate size */
+    }
+}
