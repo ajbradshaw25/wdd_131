@@ -63,8 +63,8 @@ a {
 }
 
 .logo-icon {
-    width: 60px; /* Larger icon */
-    height: 60px;
+    width: 100px; /* Larger icon */
+    height: 100px;
     margin-right: 0.2rem; /* Reduced margin */
 }
 
@@ -220,8 +220,8 @@ a {
 }
 
 .social img {
-    width: 24px; /* Icon size inside square */
-    height: 24px;
+    width: 45px; /* Icon size inside square */
+    height: 45px;
 }
 
 .attribution {
@@ -230,7 +230,7 @@ a {
 }
 
 .attribution a {
-    color: var(--text-dark);
+    color: #2583cf;
     text-decoration: underline;
 }
 
