@@ -125,8 +125,8 @@ a {
     border-radius: 0; /* No border-radius */
     box-shadow: none; /* No shadow */
     overflow: hidden;
-    width: 100%;
-    max-width: 500px; /* Max width for mobile card */
+    width: 150%;
+    max-width: 1000px; /* Max width for mobile card */
 }
 
 .recipe-image {
@@ -140,11 +140,13 @@ a {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    flex: 33.33%;
+    padding: 5px;
 }
 
 .recipe-tag {
-    background-color: var(--text-dark); /* Black background for tag */
-    color: white;
+    background-color: var(--text-light); /* Black background for tag */
+    color: black;
     padding: 0.3em 0.8em;
     font-size: 0.75em;
     text-transform: uppercase;
