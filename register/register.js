@@ -116,7 +116,7 @@ function submitForm(event) {
     const totalFee = totalFees();
 
     // 3. Get the adult name and number of participants
-    const adultName = document.getElementById('adultName').value;
+    const adultName = document.getElementById('adult_name').value;
     // participantCount is already accurate from the addParticipant function
 
     // 4. Prepare the info object for the template
@@ -130,7 +130,7 @@ function submitForm(event) {
     const successMessage = successTemplate(info);
 
     // 6. Hide the Form and show the summary element
-    const formElement = document.getElementById('hikeForm');
+    const formElement = document.forms[0];
     const summaryElement = document.getElementById('summary');
 
     // Hide the form
@@ -144,4 +144,4 @@ function submitForm(event) {
 }
 
 // Attach the event listener to the form for a 'submit' event
-document.getElementById('hikeForm').addEventListener('submit', submitForm);
+document.forms[0].addEventListener('submit', submitForm);
