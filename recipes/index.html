@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
-    <meta name="description" content="A collection of delicious and easy-to-make recipes for home cooks. Find your next favorite meal!">
-	<link rel="stylesheet" href="recipes.css" />
-
-    <meta property="og:title" content="Recipe Book - Delicious and Easy Meals">
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="A collection of delicious and easy-to-make recipes for home cooks. Find your next favorite meal!">
-    <meta property="og:image" content="https://example.com/images/featured_food.jpg"> 
-    <meta property="og:url" content="https://example.com/index.html"> 
+    <meta name="description" content="A simple responsive recipe book website.">
+    <meta name="author" content="Ashley">
+    <!-- Social Media Meta-->
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A simple responsive recipe book website.">
+    <meta property="og:image" content="images/recipe-book.png"> 
+    <meta property="og:url" content="https://ajbradshaw25.github.io/wdd_131/recipes/"> 
     <meta name="twitter:card" content="summary_large_image">
-
     <link rel="icon" href="images/recipe-book.png">
+    <link rel="stylesheet" href="recipes.css">
 </head>
 <body>
     <header class="site-header">
+        <!--HEADER-->
         <a href="/index.html" class="logo-link">
             <img src="recipe-book.png" alt="Recipe book icon" class="logo-icon">
             <h1 class="site-title">Recipe Book</h1>
         </a>
-        
-        <form class="search-form">
-            <input type="search" id="search" placeholder="Search recipes by name or ingredients" aria-label="Search recipes">
-            <button type="submit" class="search-button">
-                <a href="#"><img src="search.svg" alt="search icon" 
-                style="width:30px;height:30px"></a>
-            </button>
-        </form>
     </header>
 <main class="recipe-grid">
+    <!--SEARCH BAR-->
+    <form class="search-form">
+        <input type="text" id="search" placeholder="Find a recipe">
+        <button type="submit">
+            <img src="search.svg" alt="search icon">
+        </button>
+    </form>
+    <!--RECIPE CARD-->
         <section class="recipe-card">
             <img src="german-gooseberry-cake.jpg" alt="German Gooseberry Cake" class="recipe-image">
             <div class="recipe-info">
-                <span class="recipe-tag">Dessert</span>
-                <span class="recipe-tag">German</span>
+                <span class="recipe-tag">dessert</span>
+                <span class="recipe-tag">german</span>
                 <h2 class="recipe-title">Gooseberry cake with vanilla cream and crumble</h2>
                 <p class="recipe-time">🕒 Prep: 30 min | Cook: 45 min</p>
                 <div class="recipe-rating">
@@ -52,11 +53,9 @@
                     </span>
                 </div>
                 <p class="recipe-description">This gooseberry cake with crumble is easy to follow, a bit tart and not too sweet. Made up of a cake base, filled with fresh gooseberries and vanilla cream and finished off with crumble that's flavored with vanilla. A must have recipe for gooseberry lovers!!</p>
-
             </div>
         </section>
-        
-        </main>
+    </main>
 <footer class="site-footer">
     <p class="attribution">
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
