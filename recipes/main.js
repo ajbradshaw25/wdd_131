@@ -1,6 +1,6 @@
-// 01 Build the random functions
 import recipes from './recipes.mjs';
 
+/* --------- RANDOM FUNTIONS -------- */
 function random(num) {
 	// returns a whole number between 0 and num - 1
 	return Math.floor(Math.random() * num);
@@ -11,15 +11,18 @@ function getRandomListEntry(list) {
 	const randomNum = random(listLength);
 	return list[randomNum];
 }
-// 02 Create Template Functions
+
+/* --------- TEMPLATE FUNCTIONS -------- */
 
 function tagsTemplate(tags) {
     // Loop through the tags and transform the strings into <span> HTML elements
     // We are using <span> instead of <li> as per the updated mockup/HTML structure, 
     // although <li> is fine if wrapped in a <ul>.
-    return tags
-        .map(tag => `<span class="recipe-tag">${tag.toLowerCase()}</span>`)
-        .join('');
+    let html = "";
+    tags.forEach((tag) ==> {
+        html += `<span class="tag">${tag}</span>`;
+    });
+    return html;
 }
 
 function ratingTemplate(rating) {
@@ -55,8 +58,7 @@ function recipeTemplate(recipe) {
     return `<section class="recipe-card">
             <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
             <div class="recipe-info">
-                <span class="recipe-tag">${tagsHtml}</span>
-                <span class="recipe-tag">${tagsHtml}</span>
+                ${tagsTemplate(recipe.tags)}
                 <h2 class="recipe-title">${recipe.name.toUpperCase()}</h2>
                 <p class="recipe-time">🕒 Prep: 30 min | Cook: 45 min</p>
                 <div class="recipe-rating">
@@ -68,27 +70,19 @@ function recipeTemplate(recipe) {
         </section>`;
 }
 
-// 03 Render the Random Recipe
+/* --------- RENDER -------- */
+
 function renderRecipes(recipeList) {
-    // Get the element we will output the recipes into (The <main> element)
-    const outputElement = document.querySelector('.recipe-grid');
-    
-    // Clear any existing content
-    outputElement.innerHTML = ''; 
+    const display = document.querySelector("#recipeDisplay");
 
-    if (recipeList.length === 0) {
-        outputElement.innerHTML = '<p class="no-results">No recipes found matching your search criteria.</p>';
-        return;
-    }
+    const recipesHTML = recipeList
+        .map((recipe) => recipeTemplate(recipe))
+        .join("");
 
-    // Use the recipeTemplate function to transform our recipe objects into HTML strings
-    const htmlStrings = recipeList.map(recipe => recipeTemplate(recipe));
-    
-    // Join the strings and set as the innerHTML of our output element
-    outputElement.innerHTML = htmlStrings.join('');
+    display.innerHTML = recipesHTML;
 }
 
-// 04 Filtering Recipes
+/* --------- FILTER -------- */
 
 function filterRecipes(query) {
     // Ensure query is lowercase for case-insensitive comparison
@@ -104,19 +98,21 @@ function filterRecipes(query) {
         const descriptionMatch = recipe.description.toLowerCase().includes(lowerQuery);
         
         // Check if query is in the tag (since tag is a single string in our data)
-        const tagMatch = recipe.tag.toLowerCase().includes(lowerQuery);
+        const tagMatch = recipe.tags.find((tag) =>
+        tag.toLowerCase().includes(lowerQuery)
+    );
         
         // (Optional: If you add an ingredients array, you can use Array.find here)
-
+        const ingredientMatch = recipe.ingredients.find((item) =>
+        item.toLowerCase().includes(lowerQuery)
+    );
         // Return true if any field matches the query
-		return nameMatch || descriptionMatch || tagMatch;
+		return nameMatch || descriptionMatch || tagMatch || ingredientMatch;
 	});
 
 	// 2. Sort the filtered list by name alphabetically
 	const sorted = filtered.sort((a, b) => {
-		if (a.name < b.name) return -1;
-		if (a.name > b.name) return 1;
-		return 0;
+		a.name.localeCompare(b.name)
 	});
 
 	return sorted;
@@ -127,7 +123,7 @@ function searchHandler(e) {
 	e.preventDefault(); 
     
     // 1. Get the search input value
-    const searchInput = document.getElementById('search');
+    const searchInput = document.querySelector("search");
     const query = searchInput.value;
 
 	// 2. Use the filter function to filter our recipes
@@ -137,7 +133,7 @@ function searchHandler(e) {
 	renderRecipes(filteredList);
 }
 
-// Initialization and Event Listener
+/* --------- INIT -------- */
 function init() {
     // 04 Render a Random Recipe on load (as instructed)
 	const recipe = getRandomListEntry(recipes);
@@ -145,9 +141,9 @@ function init() {
 	renderRecipes([recipe]); 
 
     // 05 Attach Event Listener to the search form/button
-    const searchForm = document.querySelector('.search-form');
+    const searchForm = document.querySelector("#searchForm");
     // We attach the listener to the form to handle both button click and 'Enter' press
-    searchForm.addEventListener('submit', searchHandler);
+    searchForm.addEventListener("submit", searchHandler);
 }
 
 // Run the initialization function when the script loads

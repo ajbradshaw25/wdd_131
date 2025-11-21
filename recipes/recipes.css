@@ -1,7 +1,13 @@
 /* Import accessible header font replacement: Handlee */
 @import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 
-/* Custom Properties */
+/* Global Styles and Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --primary-color: #333; /* Darker text for cleaner look */
     --secondary-color: #f7a072; /* A warm orange for accents */
@@ -13,18 +19,136 @@
     --border-color: #ccc;
 }
 
-/* Global Styles and Resets */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Custom Properties */
 body {
     font-family: var(--primary-font);
     color: var(--text-dark);
     line-height: 1.6;
     background-color: white; /* White background as in mockup */
+    padding: 1rem;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0 2rem 0;
+}
+
+header img {
+    width: 55px;
+    height: auto;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-family: var(--secondary-font);
+  letter-spacing: 2px;
+}
+
+/* SEARCH BAR */
+#searchForm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 500px; /* Wider search bar */
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0 .5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden; /* Ensures search button fits cleanly */
+}
+
+#searchForm input {
+    flex: 1;
+    border: none;
+    padding: .75rem;
+    font-size: 1rem;
+}
+
+#searchForm button {
+  background: none;
+  border: none;
+  padding: .5rem;
+}
+
+#searchForm button img {
+  width: 22px;
+}
+
+/* RECIPE CARD */
+#recipeDisplay {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+#recipeDisplay img {
+  width: 50%;
+  border-radius: 6px;
+}
+
+/* TEXT SIDE OF CARD */
+.recipe-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* TAG */
+.tag {
+  display: inline-block;
+  border: 1px solid #777;
+  padding: .25rem .6rem;
+  border-radius: 4px;
+  font-size: .85rem;
+  background: white;
+  text-transform: lowercase;
+}
+
+/* TITLE */
+.recipe-title {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social img {
+  width: 28px;
+  height: 28px;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 600px) {
+  #recipeDisplay {
+    flex-direction: column;
+  }
+
+  #recipeDisplay img {
+    width: 100%;
+  }
+
+  .recipe-info {
+    width: 100%;
+  }
 }
 
 img {
