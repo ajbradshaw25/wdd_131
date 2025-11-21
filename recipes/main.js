@@ -55,7 +55,8 @@ function recipeTemplate(recipe) {
     return `<section class="recipe-card">
             <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
             <div class="recipe-info">
-                ${tagsHtml}
+                <span class="recipe-tag">${tagsHtml}</span>
+                <span class="recipe-tag">${tagsHtml}</span>
                 <h2 class="recipe-title">${recipe.name.toUpperCase()}</h2>
                 <p class="recipe-time">🕒 Prep: 30 min | Cook: 45 min</p>
                 <div class="recipe-rating">
