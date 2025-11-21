@@ -17,45 +17,26 @@
     <link rel="stylesheet" href="recipes.css">
 </head>
 <body>
-    <header class="site-header">
-        <!--HEADER-->
+    <!--HEADER-->
+    <header>
         <a href="/index.html" class="logo-link">
-            <img src="recipe-book.png" alt="Recipe book icon" class="logo-icon">
+            <img src="recipe-book.png" alt="Recipe book icon" />
             <h1 class="site-title">Recipe Book</h1>
         </a>
 
-        <!--SEARCH BAR-->
-    <form class="search-button">
-        <input type="text" id="search" placeholder="Find a recipe">
+    </header>
+<main>
+
+    <!--SEARCH BAR-->
+    <form id="search-button">
+        <input type="text" id="searchInput" placeholder="Find a recipe">
         <button type="submit">
-            <img src="search.svg" alt="search icon">
+            <img src="search.svg" alt="search icon" />
         </button>
     </form>
-    </header>
-<main class="recipe-grid">
+
     <!--RECIPE CARD-->
-        <section class="recipe-card">
-            <img src="german-gooseberry-cake.jpg" alt="German Gooseberry Cake" class="recipe-image">
-            <div class="recipe-info">
-                <span class="recipe-tag">dessert</span>
-                <span class="recipe-tag">german</span>
-                <h2 class="recipe-title">Gooseberry cake with vanilla cream and crumble</h2>
-                <p class="recipe-time">🕒 Prep: 30 min | Cook: 45 min</p>
-                <div class="recipe-rating">
-                    <span
-                        class="rating"
-                        role="img"
-                        aria-label="Rating: 4 out of 5 stars">
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star-empty">☆</span>
-                    </span>
-                </div>
-                <p class="recipe-description">This gooseberry cake with crumble is easy to follow, a bit tart and not too sweet. Made up of a cake base, filled with fresh gooseberries and vanilla cream and finished off with crumble that's flavored with vanilla. A must have recipe for gooseberry lovers!!</p>
-            </div>
-        </section>
+        <section id="recipeDisplay"></section>
     </main>
 <footer class="site-footer">
     <p class="attribution">
