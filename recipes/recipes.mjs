@@ -1,4 +1,4 @@
-const recipes = [
+export const recipes = [
 	{
 		author: 'Provo High Culinary Students',
 		url: '',
@@ -280,4 +280,6 @@ const recipes = [
 	}
 ]
 
-export default recipes;
+export function getRecipeById(id) {
+    return recipes.find(recipe => recipe.id === id);
+}

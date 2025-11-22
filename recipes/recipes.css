@@ -16,16 +16,21 @@
     --primary-font: Arial, Helvetica, sans-serif;
     --secondary-font: "Handlee", cursive; 
     --max-width-desktop: 900px; /* Adjusted max width */
-    --border-color: #ccc;
+    --border-color: #e2e2e2;
 }
 
-/* Custom Properties */
+/* Global Styles and Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: var(--primary-font);
     color: var(--text-dark);
     line-height: 1.6;
     background-color: white; /* White background as in mockup */
-    padding: 1rem;
 }
 
 /* HEADER */
@@ -38,14 +43,8 @@ header {
 }
 
 header img {
-    width: 55px;
+    width: 60px;
     height: auto;
-}
-
-header h1 {
-  font-size: 3rem;
-  font-family: var(--secondary-font);
-  letter-spacing: 2px;
 }
 
 /* SEARCH BAR */
@@ -53,7 +52,7 @@ header h1 {
     width: 100%;
     display: flex;
     align-items: center;
-    max-width: 500px; /* Wider search bar */
+    /*max-width: 500px; */
     border: 2px solid var(--border-color);
     border-radius: 4px;
     padding: 0 .5rem;
@@ -151,6 +150,10 @@ footer {
   }
 }
 
+
+
+
+
 img {
     max-width: 100%;
     height: auto;
@@ -211,15 +214,16 @@ a {
 
 #search {
     padding: 0.8rem 1rem; /* More padding */
-    border: none; /* No individual border */
+    border: 500px; /* No individual border */
     flex-grow: 1;
     font-size: 1rem;
-    outline: none; /* Remove outline on focus */
+    outline: 0; /* Remove outline on focus */
 }
 
 .search-button {
-    background-color: white; /* White background */
-    border: none;
+    background-color: rgb(255, 255, 255); /* White background */
+    border: 3px solid var(--border-color);
+    border-radius: 3px;
     padding: 0.8rem 1rem;
     cursor: pointer;
     display: flex; /* To center icon */
