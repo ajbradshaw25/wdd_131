@@ -33,127 +33,6 @@ body {
     background-color: white; /* White background as in mockup */
 }
 
-/* HEADER */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0 2rem 0;
-}
-
-header img {
-    width: 60px;
-    height: auto;
-}
-
-/* SEARCH BAR */
-#searchForm {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    /*max-width: 500px; */
-    border: 2px solid var(--border-color);
-    border-radius: 4px;
-    padding: 0 .5rem;
-    margin-bottom: 1.5rem;
-    overflow: hidden; /* Ensures search button fits cleanly */
-}
-
-#searchForm input {
-    flex: 1;
-    border: none;
-    padding: .75rem;
-    font-size: 1rem;
-}
-
-#searchForm button {
-  background: none;
-  border: none;
-  padding: .5rem;
-}
-
-#searchForm button img {
-  width: 22px;
-}
-
-/* RECIPE CARD */
-#recipeDisplay {
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  padding: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-#recipeDisplay img {
-  width: 50%;
-  border-radius: 6px;
-}
-
-/* TEXT SIDE OF CARD */
-.recipe-info {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-
-/* TAG */
-.tag {
-  display: inline-block;
-  border: 1px solid #777;
-  padding: .25rem .6rem;
-  border-radius: 4px;
-  font-size: .85rem;
-  background: white;
-  text-transform: lowercase;
-}
-
-/* TITLE */
-.recipe-title {
-  font-family: var(--secondary-font);
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-
-/* FOOTER */
-footer {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social {
-  display: flex;
-  gap: 1rem;
-}
-
-.social img {
-  width: 28px;
-  height: 28px;
-}
-
-/* MOBILE VERSION */
-@media (max-width: 600px) {
-  #recipeDisplay {
-    flex-direction: column;
-  }
-
-  #recipeDisplay img {
-    width: 100%;
-  }
-
-  .recipe-info {
-    width: 100%;
-  }
-}
-
-
-
-
-
 img {
     max-width: 100%;
     height: auto;
@@ -190,8 +69,8 @@ a {
 }
 
 .logo-icon {
-    width: 100px; /* Larger icon */
-    height: 100px;
+    width: 60px; /* Larger icon */
+    height: 60px;
     margin-right: 0.2rem; /* Reduced margin */
 }
 
@@ -212,18 +91,17 @@ a {
     overflow: hidden; /* Ensures search button fits cleanly */
 }
 
-#search {
+#searchForm {
     padding: 0.8rem 1rem; /* More padding */
-    border: 500px; /* No individual border */
+    border: none; /* No individual border */
     flex-grow: 1;
     font-size: 1rem;
-    outline: 0; /* Remove outline on focus */
+    outline: none; /* Remove outline on focus */
 }
 
 .search-button {
-    background-color: rgb(255, 255, 255); /* White background */
-    border: 3px solid var(--border-color);
-    border-radius: 3px;
+    background-color: white; /* White background */
+    border: none;
     padding: 0.8rem 1rem;
     cursor: pointer;
     display: flex; /* To center icon */
@@ -253,8 +131,8 @@ a {
     border-radius: 0; /* No border-radius */
     box-shadow: none; /* No shadow */
     overflow: hidden;
-    width: 150%;
-    max-width: 1000px; /* Max width for mobile card */
+    width: 100%;
+    max-width: 500px; /* Max width for mobile card */
 }
 
 .recipe-image {
@@ -268,13 +146,11 @@ a {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    flex: 33.33%;
-    padding: 5px;
 }
 
 .recipe-tag {
-    background-color: var(--text-light); /* Black background for tag */
-    color: black;
+    background-color: var(--text-dark); /* Black background for tag */
+    color: white;
     padding: 0.3em 0.8em;
     font-size: 0.75em;
     text-transform: uppercase;
@@ -350,8 +226,8 @@ a {
 }
 
 .social img {
-    width: 45px; /* Icon size inside square */
-    height: 45px;
+    width: 24px; /* Icon size inside square */
+    height: 24px;
 }
 
 .attribution {
@@ -360,8 +236,36 @@ a {
 }
 
 .attribution a {
-    color: #2583cf;
+    color: var(--text-dark);
     text-decoration: underline;
+}
+
+#searchForm input {
+    flex: 1;
+    border: none;
+    padding: .75rem;
+    font-size: 1rem;
+}
+
+#searchForm button {
+  background: none;
+  border: none;
+  padding: .5rem;
+}
+
+#searchForm button img {
+  width: 22px;
+}
+
+/* TAG */
+.tag {
+  display: inline-block;
+  border: 1px solid #777;
+  padding: .25rem .6rem;
+  border-radius: 4px;
+  font-size: .85rem;
+  background: white;
+  text-transform: lowercase;
 }
 
 /* --- Media Queries for Responsiveness --- */
