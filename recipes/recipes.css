@@ -93,7 +93,7 @@ a {
 
 #searchForm {
     padding: 0.8rem 1rem; /* More padding */
-    border: none; /* No individual border */
+    border: none;
     flex-grow: 1;
     font-size: 1rem;
     outline: none; /* Remove outline on focus */
@@ -101,8 +101,9 @@ a {
 
 .search-button {
     background-color: white; /* White background */
-    border: none;
-    padding: 0.8rem 1rem;
+    border: 3px solid var(--border-color); /* border */
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     display: flex; /* To center icon */
     align-items: center;
@@ -133,6 +134,10 @@ a {
     overflow: hidden;
     width: 100%;
     max-width: 500px; /* Max width for mobile card */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .recipe-image {
@@ -149,7 +154,7 @@ a {
 }
 
 .recipe-tag {
-    background-color: var(--text-dark); /* Black background for tag */
+    background-color: #9e9e9e; /* Black background for tag */
     color: white;
     padding: 0.3em 0.8em;
     font-size: 0.75em;
