@@ -1,4 +1,5 @@
-export const recipes = [
+// recipes.mjs
+const recipes = [
 	{
 		author: 'Provo High Culinary Students',
 		url: '',
@@ -280,6 +281,5 @@ export const recipes = [
 	}
 ]
 
-export function getRecipeById(id) {
-    return recipes.find(recipe => recipe.id === id);
-}
+// This makes the 'recipes' the default export
+export default recipes;
