@@ -75,7 +75,7 @@ function recipeTemplate(recipe) {
 // 04 Render the Random Recipe
 function renderRecipes(recipeList) {
     // Get the element we will output the recipes into (The <main> element)
-    const outputElement = document.querySelector(".recipe-grid");
+    const outputElement = document.querySelector(".recipe-card");
 
     // Clear any existing content
     outputElement.innerHTML = '';
@@ -106,10 +106,11 @@ function filterRecipes(query) {
         const descriptionMatch = recipe.description.toLowerCase().includes(lowerQuery);
         
         // Check if query is in the tag (since tag is a single string in our data)
-        const tagMatch = recipe.tags.toLowerCase().includes(lowerQuery);
+        const tagMatch = recipe.tags.find((tag) =>
+        tag.toLowerCase().includes(query))
         
         // (Optional: If you add an ingredients array, you can use Array.find here)
-        const ingredientMatch = recipe.ingredients.find((item) =>
+        const ingredientMatch = recipe.recipeingredients.find((item) =>
         item.toLowerCase().includes(lowerQuery)
     );
         // Return true if any field matches the query
@@ -131,7 +132,7 @@ function searchHandler(e) {
 	e.preventDefault(); 
     
     // 1. Get the search input value
-    const searchInput = document.getElementById("search");
+    const searchInput = document.searchForm.searchInput;
     const query = searchInput.value;
 
 	// 2. Use the filter function to filter our recipes
@@ -149,7 +150,7 @@ function init() {
 	renderRecipes([recipe]); 
 
     // 05 Attach Event Listener to the search form/button
-    const searchForm = document.querySelector(".search-form");
+    const searchForm = document.querySelector("#search-form");
     // We attach the listener to the form to handle both button click and 'Enter' press
     searchForm.addEventListener("submit", searchHandler);
 }
