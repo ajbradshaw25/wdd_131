@@ -1,7 +1,8 @@
 /* if you are using any Google fonts change the font names below to your fonts. 
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a | */
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Permanent+Marker&family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Story+Script&display=swap');
+
 :root {
   /* change the values below to your colors from your palette */
   --primary-color: #2692EB;
@@ -10,19 +11,19 @@ Fonts are separated by a | */
   --accent2-color: #AAEFFF;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: "IM Fell French Canon SC";
-  --paragraph-font: Lato, Helvetica, sans-serif;
+  --heading-font: "Story Script";
+  --paragraph-font: Roboto, Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #e28343;  /* headlines on a white background */ 
-  --headline-color-on-color: #2ffff8; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #002525; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: #77DDDA; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #2A7378  ;
-  --nav-link-color: #FBB657;
-  --nav-background-color: #2A7378;
-  --nav-hover-link-color: #e9926d;
-  --nav-hover-background-color: #0da4af;
+  --headline-color-on-white: #418cee;  /* headlines on a white background */ 
+  --headline-color-on-color: #000000; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #5acece; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #2e3d3d; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #329df5  ;
+  --nav-link-color: #000000;
+  --nav-background-color: #84cef8;
+  --nav-hover-link-color: #fae5dc;
+  --nav-hover-background-color: #e09a31;
 }
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
