@@ -36,7 +36,7 @@ body {
     padding: 0;
 }
 header {
-    background-color:#f5df1a;
+    background-color:#f5cd1a;
     display: grid;
     grid-template-columns: 200px auto;
 }
@@ -55,7 +55,7 @@ header {
     color:black
 }
 footer {
-    background-color:#f5df1a;
+    background-color:#f5cd1a;
     color:#497aff;
     padding: 25px 50px;
     margin-top: 100px;
@@ -90,6 +90,7 @@ footer p a:hover {
 }
 footer .social img {
     padding-top: 15px;
+    padding: 5px;
 }
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
