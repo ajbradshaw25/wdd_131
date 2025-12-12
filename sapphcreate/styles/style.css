@@ -7,7 +7,7 @@
 }
 nav a {
     text-align: center;
-    color:#ad9610;
+    color:#887406;
     font-family: 'PT Sans';
     font-size: 30px;
     text-decoration: none;
@@ -19,7 +19,7 @@ nav {
     text-align: center;
 }
 nav a:hover {
-    background-color:#ebc60f;
+    background-color:#e4bb06;
     color:#4183ff;
 }
 main section {
@@ -64,7 +64,7 @@ footer {
     align-items: center;
 }
 footer a {
-    color:#ad9610;
+    color:#887406;
     text-decoration: none;
 }
 footer a:hover {
