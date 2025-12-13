@@ -26,7 +26,7 @@ function participantTemplate(count) {
             <input type="number" id="age${count}" name="age${count}" value="" required>
         </div>
         <div class="item">
-            <label for="fee${count}">Fee</label>
+            <label for="fee${count}">Fee ($)</label>
             <input type="number" id="fee${count}" name="fee${count}" value="100" required>
         </div>
         <div class="item">
