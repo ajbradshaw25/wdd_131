@@ -153,6 +153,94 @@ footer .social img {
     width: 350px;
 }
 
+/* recipe randomizer css */
+/* Main Content and Recipe Grid Styling (Mobile First) */
+.recipe-grid {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    max-width: 500px; /* Center content */
+    margin: 0 auto;
+}
+
+.recipe-card {
+    background-color: white;
+    border: 1px solid var(--border-color); /* Border as in mockup */
+    border-radius: 0; /* No border-radius */
+    box-shadow: none; /* No shadow */
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px; /* Max width for mobile card */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-image {
+    height: 250px; /* Slightly taller image */
+    object-fit: cover;
+    width: 100%; /* Ensure image fills width */
+}
+
+.recipe-info {
+    padding: 1.5rem 1rem; /* More vertical padding */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.recipe-tag {
+    background-color: #9e9e9e; /* Black background for tag */
+    color: white;
+    padding: 0.3em 0.8em;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    align-self: flex-start; /* Align to the left */
+    margin-bottom: 0.5rem;
+}
+
+.recipe-title {
+    font-size: 2.5rem; /* Larger title */
+    margin: 0;
+    font-family: "Story Script", Helvitica, sans-serif; /* Ensure Handlee for title */
+    color: #4a90e2; /* Blue color for title as in mockup */
+}
+
+.recipe-time {
+    display: none; /* Removed from mockup */
+}
+
+.recipe-rating {
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    font-size: 1.8rem; /* Larger stars */
+}
+
+.icon-star {
+    color: #f8e71c; /* Yellow color for filled stars */
+}
+
+.icon-star-empty {
+    color: #d8d8d8; /* Lighter grey for empty stars */
+}
+
+.recipe-description {
+    /* Always show as per mockup, but styling needs adjustment for responsiveness */
+    display: block; 
+    font-size: 1rem;
+    font-family: Roboto, Helvitica, sans-serif;;
+    color: var(--text-dark);
+    margin-top: 0.5rem;
+}
+
+.view-recipe-button {
+    display: none; /* Removed from mockup */
+}
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
@@ -198,5 +286,44 @@ footer .social img {
     }
     footer {
         margin-top: 25px;
+    }
+}
+/* Breakpoint 1: Tablet/Small Desktop (approx. 600px -> using 768px for a clearer split) */
+@media (min-width: 768px) {
+    .recipe-grid {
+        padding: 2rem 1rem;
+        justify-content: center;
+    }
+
+    .recipe-card {
+        display: flex; /* Flex layout for image and info side-by-side */
+        width: 100%;
+        max-width: 800px; /* Full width of content area */
+        align-items: stretch; /* Stretch content to fill height */
+    }
+
+    .recipe-image {
+        width: 40%; /* Image takes 40% of the card width */
+        height: auto; /* Allow height to adjust */
+        object-fit: cover;
+    }
+
+    .recipe-info {
+        width: 60%; /* Info takes 60% of the card width */
+        padding: 2rem; /* More padding on desktop */
+    }
+
+    .recipe-description {
+        /* Adjust for desktop layout */
+        flex-grow: 1; /* Make description take available space */
+    }
+}
+/* No explicit 960px breakpoint needed if 768px handles the main layout, 
+   but we can constrain the max width of the elements. */
+@media (min-width: 900px) {
+    .recipe-card {
+        max-width: var(--max-width-desktop);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
