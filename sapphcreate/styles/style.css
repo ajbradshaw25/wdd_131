@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans&family=Permanent+Marker&family=Rock+Salt&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Permanent+Marker&family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Story+Script&display=swap');
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -92,6 +91,44 @@ footer .social img {
     padding-top: 15px;
     padding: 5px;
 }
+.home-grid3 {
+    display: flex;
+}
+.card-img3 {
+    box-shadow: 5px 5px 10px #4d4d4d;
+    height: 600px;
+    width: 600px;
+}
+.nebula-card {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+.msgnebula {
+    display: flex;
+    justify-content: space-around;
+    line-height: 2.5em;
+    width: 52%;
+    padding: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+.msgnebula h1 {
+    color:#0c2044;
+    font-family: "Story Script", "Helvitica", sanserif;
+    font-size: 50px;
+}
+.msgnebula p {
+    color:black;
+    font-family: "Roboto", "Helvitica", sanserif;
+    font-size: .8em;
+    padding-bottom: 1px;
+}
+
+
+
+
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
