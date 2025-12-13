@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Permanent+Marker&family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Story+Script&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #3f3f3f;
+    line-height: 22px;
+}
+
+div,
+form,
+input,
+select,
+textarea,
+label,
+p {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.testbox {
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.testbox h1 {
+    display: flex;
+    font-family: "Story Script", Roboto, sans-serif;
+    font-size: 3em;
+    color:#000000;
+    justify-content: center;
+}
+form {
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 10px #0780c7;
+}
+fieldset {
+    margin-bottom: 2em;
+}
+input,
+select,
+textarea {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input {
+    width: 100%;
+    padding: 5px;
+}
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 1em;
+}
+input[type="date"] {
+    padding: 4px 5px;
+}
+textarea {
+    width: 100%;
+    padding: 5px;
+}
+.item:hover p,
+.item:hover i,
+.question:hover p,
+.question label:hover,
+input:hover::placeholder {
+    color: #f8a82f;
+}
+.item input:hover,
+.item select:hover,
+.item textarea:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px 0 #32b3fd;
+    color: #075fa7;
+}
+.item {
+    position: relative;
+    margin: 10px 0;
+}
+.item span {
+    color: red;
+}
+
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.columns div {
+    width: 48%;
+}
+
+/* Style checkbox and radio. To do this we have to hide the defaults then we create our own */
+input[type="radio"] {
+    display: none;
+}
+label.radio {
+    position: relative;
+    display: inline-block;
+    margin: 5px 20px 15px 0;
+    cursor: pointer;
+}
+.question span {
+    margin-left: 30px;
+}
+.question-answer label {
+    display: block;
+}
+label.radio:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+input[type="radio"]:checked + label:before,
+label.radio:hover:before {
+    border: 2px solid #eb991e;
+}
+label.radio:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 8px;
+    height: 4px;
+    border: 3px solid #7a4c07;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+/* end style checkbox and radio */
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
+button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2386e4;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {
+    background: #fa9d47;
+}
+/* Example CSS for the participants fieldset and button */
+#participants {
+    display: grid;
+    /* Create a grid with two equally sized columns */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; /* Optional: adds space between items */
+}
+
+/* Target the Add Participant button */
+#add {
+    /* Make the button span both columns to push it to the next row */
+    grid-column: 1 / 3; 
+    /* Or use a shorthand: */
+    /* grid-column: span 2; */
+    /* Ensure it's not stretched if using display: grid on its parent */
+    justify-self: start; 
+}
+
+/* The style to hide an element */
+.hide {
+    display: none;
+}
+
+
+
+/*styles for the header and the footer */
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+}
+nav a {
+    text-align: center;
+    color:#e68e3b;
+    font-family: 'PT Sans';
+    font-size: 30px;
+    text-decoration: none;
+    padding: 50px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+nav a:hover {
+    background-color:#ffa43d;
+    color:#1b66f0;
+}
+main section {
+    text-align: center;
+}
+#background {
+    height: 725px;
+}
+body {
+    background-color:rgb(255, 255, 255);
+    font-family: "PT Sans", "Helvitica", sanserif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color:#66d6f0;
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+footer {
+    background-color:#66d6f0;
+    color:#022586;
+    padding: 25px 50px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a {
+    color:#e68e3b;
+    text-decoration: none;
+}
+footer a:hover {
+    color:#1b66f0;
+}
+.icon {
+    width: 80px;
+    padding-top: 10px;
+}
+footer p {
+    font-size: 1.5em;
+}
+footer p a:hover {
+    text-decoration: none;
+}
+.logo {
+    width: 140px;
+}
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+footer .social img {
+    padding-top: 15px;
+    padding: 5px;
+}
+
+
+@media (max-width: 568px) {
+    .columns div {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #hero {
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin-top: 0;
+    }
+    #hero-msg h4 {
+        display: none;
+    }
+    #hero-msg h1 {
+        color: rgb(255, 143, 62);
+    }
+    .home-title {
+        font-size: 25px;
+    }
+    .home-title2 {
+        font-size: 25px;
+    }
+    .rivers-card, .camping-card, .rapids-card {
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    .mountains, .msg {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer {
+        margin-top: 25px;
+    }
+}
