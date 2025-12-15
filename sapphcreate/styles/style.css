@@ -25,7 +25,7 @@ main section {
     text-align: center;
 }
 #background {
-    height: 725px;
+    height: 900px;
 }
 body {
     background-color:rgb(255, 255, 255);
@@ -93,6 +93,7 @@ footer .social img {
 }
 .home-grid3 {
     display: flex;
+    flex-wrap: wrap;
 }
 .card-img3 {
     box-shadow: 5px 5px 10px #4d4d4d;
@@ -101,16 +102,37 @@ footer .social img {
 }
 .nebula-card {
     display: flex;
+    align-self: flex-start;
     justify-content: flex-start;
     margin-top: 50px;
 }
 .msg1 {
+    
+    flex-wrap: wrap;
+    justify-content:flex-end;
     line-height: 2.2em;
-    width: 52%;
+    width: 750px;
+    height: 300px;
     padding: 30px;
     margin-left: 50px;
     margin-top: 50px;
     text-align: center;
+}
+.orange-msg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    width: 750px;
+    height: 300px;
+    background-color:rgb(248, 182, 95);
+    line-height: 1.9em;
+    padding: 35px;
+    z-index: -1;
+    box-shadow: 5px 5px 10px #4d4d4d;
+    height: 10%;
+    width: 350px;
+    justify-content: flex-end;
+    align-items: center;
 }
 .msg1 h1 {
     color:#0c2044;
@@ -121,7 +143,7 @@ footer .social img {
     color:black;
     font-family: "Roboto", "Helvitica", sanserif;
     font-size: .8em;
-    padding-bottom: 40px;
+    text-align: center;
 }
 /* sign up button */
 .join {
@@ -140,12 +162,12 @@ footer .social img {
     color:black
 }
 .msg {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color:rgb(248, 182, 95);
     line-height: 1.9em;
     padding: 35px;
-    position: absolute;
-    left: 1045px;
-    top: 740px;
     z-index: -1;
     box-shadow: 5px 5px 10px #4d4d4d;
     height: 10%;
@@ -164,25 +186,39 @@ footer .social img {
     max-width: 500px; /* Center content */
     margin: 0 auto;
 }
-
-.recipe-card {
-    background-color: white;
-    border: 1px solid var(--border-color); /* Border as in mockup */
-    border-radius: 0; /* No border-radius */
-    box-shadow: none; /* No shadow */
-    overflow: hidden;
+.recipe_card {
+    box-shadow: none;
     width: 100%;
+    height: 100%;
     max-width: 500px; /* Max width for mobile card */
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
 }
-
+.recipe-card {
+    box-shadow: none;
+    width: 50%;
+    height: 50%;
+    max-width: 500px; /* Max width for mobile card */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.cake-back {
+    background-color:rgb(71, 167, 245);
+    padding: 35px;
+    z-index: -1;
+    box-shadow: 5px 5px 10px #4d4d4d;
+    height: 700px;
+    margin-top: -150px;
+    width: 600px;
+}
 .recipe-image {
-    height: 250px; /* Slightly taller image */
-    object-fit: cover;
-    width: 100%; /* Ensure image fills width */
+    height: 800px;
+    width: 700px;
 }
 
 .recipe-info {
@@ -190,6 +226,7 @@ footer .social img {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    height: 100px;
 }
 
 .recipe-tag {
@@ -303,8 +340,6 @@ footer .social img {
     }
 
     .recipe-image {
-        width: 40%; /* Image takes 40% of the card width */
-        height: auto; /* Allow height to adjust */
         object-fit: cover;
     }
 
