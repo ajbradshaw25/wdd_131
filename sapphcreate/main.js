@@ -57,7 +57,7 @@ function recipeTemplate(recipe) {
 
     return `
     <section class="recipe-card">
-            <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
+            <img src="images/${recipe.image}" alt="${recipe.name}" class="recipe-image">
             <div class="recipe-info">
                 ${tagsTemplate(recipe.tags)}
                 <h2 class="recipe-title">${recipe.name.toUpperCase()}</h2>
@@ -150,9 +150,10 @@ function init() {
 	renderRecipes([recipe]); 
 
     // 05 Attach Event Listener to the search form/button
-    const searchForm = document.querySelector("#search-form");
+    // const searchForm = document.querySelector("#search-form");
+    // Note: this logic for line 153 won't run without a form element in your HTML
     // We attach the listener to the form to handle both button click and 'Enter' press
-    searchForm.addEventListener("submit", searchHandler);
+    // searchForm.addEventListener("submit", searchHandler);
 }
 
 // Run the initialization function when the script loads
