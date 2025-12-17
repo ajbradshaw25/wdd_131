@@ -29,7 +29,7 @@ main section {
 }
 body {
     background-color:rgb(255, 255, 255);
-    font-family: "PT Sans", "Helvitica", sanserif;
+    font-family: Roboto, "Helvitica", sanserif;
     font-size: 22px;
     margin: 0;
     padding: 0;
@@ -93,8 +93,8 @@ footer .social img {
 }
 .home-grid3 {
     display: grid;
-    grid-template-columns: 40px 40px 560px 34.5px 25.5px 17.2px 38.2px 33.2px 87px 36.6px 50px 29px 68.3px 35.3px 35.3px 50px 50px;
-    grid-template-rows: 40px 40px 86.5px 0.1px 0.1px 37px 133px 29px 27px 26px 30px 85px 17px 18px 50px 50px 30px 29.7px 60.3px 38.5px 37px 115px 60px 248px;
+    grid-template-columns: 40px 40px 530px 34.5px 25.5px 17.2px 38.2px 33.2px 87px 36.6px 50px 29px 68.3px 35.3px 35.3px 50px 50px 30px 30px 30px 40px 45px 40px 50px 50px;
+    grid-template-rows: 40px 40px 86.5px 0.1px 0.1px 37px 133px 29px 27px 26px 30px 85px 17px 18px 50px 50px 30px 29.7px 60.3px 38.5px 37px 115px 60px 248px 50px 50px 30px 40px 30px 25px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     gap: 0px 0px;
@@ -102,11 +102,15 @@ footer .social img {
 .card-img1 {
     box-shadow: 5px 5px 10px #4d4d4d;
     height: 600px;
-    width: 600px;
+    width: 500px;
 }
 .nebula-card {
     grid-column: 2/5;
     grid-row: 2/10;
+}
+.snowflake {
+    grid-column: 6/10;
+    grid-row: 31/40;
 }
 .msg1 {
     grid-column: 7/12;
@@ -131,7 +135,7 @@ footer .social img {
     grid-row: 15/15;
 }
 .msg1 h1 {
-    color:#0c2044;
+    color:#4886fa;
     font-family: "Story Script", "Helvitica", sanserif;
     font-size: 50px;
 }
@@ -163,6 +167,43 @@ footer .social img {
     grid-column: 11/14;
     grid-row: 18/25;
 }
+.orange-msg3 {
+    width: 490px;
+    background-color:rgb(248, 182, 95);
+    line-height: 1.9em;
+    padding: 35px;
+    z-index: -2;
+    box-shadow: 5px 5px 10px #4d4d4d;
+    height: 90%;
+    grid-column: 3/5;
+    grid-row: 28/40;
+}
+.blue-msg1 {
+    width: 280px;
+    background-color:rgb(95, 230, 248);
+    line-height: 1.9em;
+    padding: 35px;
+    z-index: -1;
+    box-shadow: 10px 10px 45px rgb(0, 40, 77) inset,
+    5px 5px 15px #383838;
+    height: 50%;
+    grid-column: 4/8;
+    grid-row: 29/40;
+}
+.orange-msg3 h1 {
+    color:#4886fa;
+    font-family: "Story Script", "Helvitica", sanserif;
+    font-size: 50px;
+    line-height: 1.2em;
+    margin-top: 0%;
+}
+.orange-msg3 p {
+    color:rgb(255, 255, 255);
+    font-family: "Roboto", "Helvitica", sanserif;
+    font-size: 1em;
+    text-align: center;
+    text-shadow: 0 0 4px #d84f00, 0 0 5px #0003ce;
+}
 .msg2 h1 {
     color:#0c2044;
     font-family: "Story Script", "Helvitica", sanserif;
@@ -179,9 +220,10 @@ footer .social img {
     grid-row: 19/20;
 }
 .card-img2 {
-    box-shadow: 5px 5px 10px #4d4d4d;
-    height: 600px;
-    width: 550px;
+    box-shadow: 1px 1px 15px #3f3f3f;
+    width: 350px;
+    height: 323px;
+    z-index: 1;
     
 }
 /* sign up button */
@@ -235,12 +277,12 @@ footer .social img {
 }
 .recipe-card {
     box-shadow: none;
-    width: 100%;
-    height: 100%;
-    max-width: 800px; /* Max width for mobile card */
+    width: 1200px;
+    height: 900px;
     flex-direction: row-reverse;
-    grid-column: 14/17;
+    grid-column: 10/23;
     grid-row: 19/20;
+    gap: 150px;
 }
 /* .cake-back {
     background-color:rgb(71, 167, 245);
@@ -252,8 +294,12 @@ footer .social img {
     width: 600px;
 } */
 .recipe-image {
-    height: 400px;
-    width: 700px;
+    box-shadow: 5px 5px 10px #4d4d4d;
+    height: 600px;
+    width: 590px;
+    grid-column: 17/18;
+    grid-row: 19/20;
+    margin-left: 0%;
 }
 
 .recipe-info {
@@ -261,22 +307,26 @@ footer .social img {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    line-height: 1.8em;
     height: 100px;
+    margin-right: 230px;
 }
 
-.recipe-tag {
-    background-color: #9e9e9e; /* Black background for tag */
-    color: white;
+/* .recipe-tag {
+    background-color: #ffffff;
     padding: 0.3em 0.8em;
     font-size: 0.75em;
     text-transform: uppercase;
-    align-self: flex-start; /* Align to the left */
+    align-self: flex-start; 
     margin-bottom: 0.5rem;
 }
+*/
 
 .recipe-title {
-    font-size: 2.5rem; /* Larger title */
+    font-size: 4rem; /* Larger title */
     margin: 0;
+    line-height: 1.2em;
+    letter-spacing: 3px;
     font-family: "Story Script", Helvitica, sans-serif; /* Ensure Handlee for title */
     color: #4a90e2; /* Blue color for title as in mockup */
 }
@@ -290,7 +340,7 @@ footer .social img {
 }
 
 .rating {
-    font-size: 1.8rem; /* Larger stars */
+    font-size: 2rem; /* Larger stars */
 }
 
 .icon-star {
@@ -298,16 +348,20 @@ footer .social img {
 }
 
 .icon-star-empty {
-    color: #d8d8d8; /* Lighter grey for empty stars */
+    color: #c7c7c7; /* Lighter grey for empty stars */
 }
 
 .recipe-description {
     /* Always show as per mockup, but styling needs adjustment for responsiveness */
     display: block; 
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: Roboto, Helvitica, sans-serif;;
-    color: var(--text-dark);
+    color: #000000;
     margin-top: 0.5rem;
+    margin-left: 0px;
+    grid-row: 7/13;
+    grid-column: 3/8;
+    text-align: center;
 }
 
 .view-recipe-button {
@@ -342,16 +396,6 @@ footer .social img {
         width: 100%;
         max-width: 800px; /* Full width of content area */
         align-items: stretch; /* Stretch content to fill height */
-    }
-
-    .recipe-info {
-        width: 60%; /* Info takes 60% of the card width */
-        padding: 2rem; /* More padding on desktop */
-    }
-
-    .recipe-description {
-        /* Adjust for desktop layout */
-        flex-grow: 1; /* Make description take available space */
     }
 }
 /* No explicit 960px breakpoint needed if 768px handles the main layout, 

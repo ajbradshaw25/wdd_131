@@ -59,7 +59,6 @@ function recipeTemplate(recipe) {
     <section class="recipe-card">
             <img src="images/${recipe.image}" alt="${recipe.name}" class="recipe-image">
             <div class="recipe-info">
-                ${tagsTemplate(recipe.tags)}
                 <h2 class="recipe-title">${recipe.name.toUpperCase()}</h2>
                 <div class="recipe-rating">
                     ${ratingTemplate(recipe.rating)}

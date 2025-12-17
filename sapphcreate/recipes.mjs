@@ -55,7 +55,7 @@ const recipes = [
 			'1 C Rice, uncooked',
 			'4-5 oz Fresh Green Beans'
 		],
-		name: 'Escalope de Poulet a la Creme with steamed green beans (Chicken with Cream)',
+		name: 'Scandinavian Christmas Shortbread',
 		prepTime: '10 min',
 		recipeInstructions: [
 			'Add 1 1/2 cups of water to a pan and bring to a boil.  Add the rice and reduce heat to low and simmer for 10-15 minutes or until all the moisture is gone.',
