@@ -38,6 +38,14 @@ img {
   display: block;
   margin: 0 auto;
 }
+.img3 {
+  height: 350px;
+  width: 350px; 
+}
+.img2 {
+  height: 400px;
+  width: 350px;
+}
 h1,
 h2,
 h3,
