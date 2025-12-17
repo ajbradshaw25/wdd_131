@@ -6,8 +6,8 @@ const recipes = [
 		isBasedOn: '',
 		cookTime: '30 Min',
 		datePublished: '2016-10-16',
-		tags: ['Waffles', 'Sweet Potato', 'Side'],
-		description: 'Savory waffles made with Sweet potato with a hint of Ginger',
+		tags: ['Chocolate', 'Dessert'],
+		description: 'This decadent chocolate cake is bound to satisfy any chocolate lover!',
 		image: 'choc-cake.jpg',
 		recipeIngredient: [
 			'2 separated eggs',
@@ -24,7 +24,7 @@ const recipes = [
 			'1/4 C Cornmeal',
 			'1 C Flour'
 		],
-		name: 'Sweet Potato Waffles',
+		name: 'Chocolate Cake',
 		prepTime: '30 Min',
 		recipeInstructions: [
 			'Add the egg yolks, oil, salt, cayenne, sugar, ginger, shallots, sweet potatoes (steam and mash before), and milk and mix well.',
@@ -33,7 +33,7 @@ const recipes = [
 			'Cook until golden brown in a waffle iron. Serve with butter and Wilted Greens or Honey.'
 		],
 		recipeYield: '6 waffles',
-		rating: 4
+		rating: 5
 	},
 	{
 		author: 'Shane Thompson',
