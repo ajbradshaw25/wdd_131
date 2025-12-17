@@ -6,7 +6,7 @@
 }
 nav a {
     text-align: center;
-    color:#e68e3b;
+    color:#0038a0;
     font-family: 'PT Sans';
     font-size: 30px;
     text-decoration: none;
@@ -18,8 +18,8 @@ nav {
     text-align: center;
 }
 nav a:hover {
-    background-color:#ffa43d;
-    color:#1b66f0;
+    background-color:#f3b124;
+    color:#ffffff;
 }
 main section {
     text-align: center;
@@ -35,7 +35,7 @@ body {
     padding: 0;
 }
 header {
-    background-color:#66d6f0;
+    background-color:#3dc8ff;
     display: grid;
     grid-template-columns: 200px auto;
 }
@@ -54,8 +54,8 @@ header {
     color:black
 }
 footer {
-    background-color:#66d6f0;
-    color:#022586;
+    background-color:#3dc8ff;
+    color:#00329e;
     padding: 25px 50px;
     margin-top: 100px;
     display: flex;
@@ -63,11 +63,11 @@ footer {
     align-items: center;
 }
 footer a {
-    color:#e68e3b;
+    color:#012c88;
     text-decoration: none;
 }
 footer a:hover {
-    color:#1b66f0;
+    color:#ffffff;
 }
 .icon {
     width: 80px;
@@ -81,6 +81,7 @@ footer p a:hover {
 }
 .logo {
     width: 140px;
+    height: 140px;
 }
 #logo_link {
     padding-top: 5px;
@@ -90,6 +91,8 @@ footer p a:hover {
 footer .social img {
     padding-top: 15px;
     padding: 5px;
+    height: 74px;
+    width: 74px;
 }
 .home-grid3 {
     display: grid;
