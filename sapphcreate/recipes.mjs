@@ -43,7 +43,7 @@ const recipes = [
 		datePublished: '',
 		tags: ['Chicken', 'Entree'],
 		description:
-			'Delicious quick and easy creamy rice dish. The mustard, mushrooms, and lemon all blend together wonderfully',
+			' This delicious scandinavian shortbread is a buttery, crisp cookie based on scandinavian traditions.',
 		image: 'snowflake.jpg',
 		recipeIngredient: [
 			'2 Chicken Tenders, Cubed',
@@ -75,7 +75,7 @@ const recipes = [
 		datePublished: '1963-12-16',
 		tags: ['Potatoes', 'side'],
 		description:
-			'Easy and delicious oven roasted potatoes that go great with almost anything.',
+			'These heart cookies are absolutely delightful. They are soft, yet have sweet crispness to them. ',
 		image: 'heart-cookie.jpg',
 		recipeIngredient: [
 			'1 1/2 cups sifted confectioners sugar',
