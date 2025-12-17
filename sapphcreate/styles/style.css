@@ -93,13 +93,13 @@ footer .social img {
 }
 .home-grid3 {
     display: grid;
-    grid-template-columns: 40px 40px 560px 34.5px 25.5px 17.2px 38.2px 33.2px 87px 36.6px 50px 29px 68.3px 35.3px 35.3px;
-    grid-template-rows: 40px 40px 86.5px 0.1px 0.1px 37px 133px 29px 27px 26px 30px 76px 17px 18px 214px 29.7px 29.7px 60.3px 38.5px 37px 115px 60px 248px;
+    grid-template-columns: 40px 40px 560px 34.5px 25.5px 17.2px 38.2px 33.2px 87px 36.6px 50px 29px 68.3px 35.3px 35.3px 50px 50px;
+    grid-template-rows: 40px 40px 86.5px 0.1px 0.1px 37px 133px 29px 27px 26px 30px 85px 17px 18px 50px 50px 30px 29.7px 60.3px 38.5px 37px 115px 60px 248px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     gap: 0px 0px;
 }
-.card-img3 {
+.card-img1 {
     box-shadow: 5px 5px 10px #4d4d4d;
     height: 600px;
     width: 600px;
@@ -140,6 +140,49 @@ footer .social img {
     font-family: "Roboto", "Helvitica", sanserif;
     font-size: .8em;
     text-align: center;
+}
+.msg2 {
+    grid-column: 7/12;
+    grid-row: 3/4;
+    line-height: 2.2em;
+    width: 750px;
+    height: 300px;
+    padding: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+.orange-msg2 {
+    width: 490px;
+    background-color:rgb(248, 182, 95);
+    line-height: 1.9em;
+    padding: 35px;
+    z-index: -1;
+    box-shadow: 5px 5px 10px #4d4d4d;
+    height: 90%;
+    grid-column: 11/14;
+    grid-row: 18/25;
+}
+.msg2 h1 {
+    color:#0c2044;
+    font-family: "Story Script", "Helvitica", sanserif;
+    font-size: 50px;
+}
+.msg2 p {
+    color:black;
+    font-family: "Roboto", "Helvitica", sanserif;
+    font-size: .8em;
+    text-align: center;
+}
+.recipeimg {
+    grid-column: 10/12;
+    grid-row: 19/20;
+}
+.card-img2 {
+    box-shadow: 5px 5px 10px #4d4d4d;
+    height: 600px;
+    width: 550px;
+    
 }
 /* sign up button */
 .join {
