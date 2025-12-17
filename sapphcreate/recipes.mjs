@@ -43,7 +43,7 @@ const recipes = [
 		datePublished: '',
 		tags: ['Chicken', 'Entree'],
 		description:
-			' This delicious scandinavian shortbread is a buttery, crisp cookie based on scandinavian traditions.',
+			'This delicious scandinavian shortbread is a buttery, crisp cookie based on scandinavian traditions.',
 		image: 'snowflake.jpg',
 		recipeIngredient: [
 			'2 Chicken Tenders, Cubed',
@@ -75,7 +75,7 @@ const recipes = [
 		datePublished: '1963-12-16',
 		tags: ['Potatoes', 'side'],
 		description:
-			'These heart cookies are absolutely delightful. They are soft, yet have sweet crispness to them. ',
+			'These heart cookies are absolutely delightful. They are soft, yet have sweet crispness to them.',
 		image: 'heart-cookie.jpg',
 		recipeIngredient: [
 			'1 1/2 cups sifted confectioners sugar',
